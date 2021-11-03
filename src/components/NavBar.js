@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import links from "../data/links";
 
 function NavBar() {
+
     return (
         <nav className="navbar">
             <NavLink exact to={links.home} activeClassName="navbar__link_active" className="navbar__link">SPA</NavLink>
