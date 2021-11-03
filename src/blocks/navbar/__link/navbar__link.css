@@ -1,0 +1,11 @@
+.navbar__link {
+    color: #9CBBFF;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 30px;
+    margin-right: 15px;
+}
+
+.navbar__link:last-of-type {
+    margin-right: 0;
+}
