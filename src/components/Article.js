@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TextContent(props) {
+function Article(props) {
     return (
         <article className="content">
             <h1 className="title">{props.title}</h1>
@@ -9,4 +9,4 @@ function TextContent(props) {
     )
 }
 
-export default TextContent;
+export default Article;
