@@ -7,6 +7,10 @@ export const texts = {
         title: 'Проблема',
         subtitle: 'Поисковые роботы не умеют исполнять JavaScript-код, поэтому при посещении SPA-ресурса «из коробки», они получают пустой index.html и содержимое сайта не индексируется.'
     },
+    task: {
+        title: 'Задача',
+        subtitle: 'Текст'
+    },
     solution: {
         title: 'Решение',
         subtitle: 'Текст'
@@ -21,6 +25,10 @@ export const texts = {
     },
     why: {
         title: 'Зачем',
+        subtitle: 'Текст'
+    },
+    who: {
+        title: 'Кто',
         subtitle: 'Текст'
     }
 }

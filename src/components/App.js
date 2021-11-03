@@ -6,7 +6,7 @@ import {texts} from "../data/texts";
 import links from "../data/links";
 
 function App() {
-    const {spa, problem, solution, technologies, result, why} = texts;
+    const {spa, problem, task, solution, technologies, result, why, who} = texts;
     return (
         <>
             <Header/>
@@ -20,6 +20,11 @@ function App() {
                     <TextContent
                         title={problem.title}
                         subtitle={problem.subtitle}/>
+                </Route>
+                <Route path={links.task}>
+                    <TextContent
+                        title={task.title}
+                        subtitle={task.subtitle}/>
                 </Route>
                 <Route path={links.solution}>
                     <TextContent
@@ -40,6 +45,11 @@ function App() {
                     <TextContent
                         title={why.title}
                         subtitle={why.subtitle}/>
+                </Route>
+                <Route path={links.who}>
+                    <TextContent
+                        title={who.title}
+                        subtitle={who.subtitle}/>
                 </Route>
             </Switch>
 
