@@ -3,6 +3,7 @@ const links = {
     problem: '/problem',
     solution: '/solution',
     technologies: '/technologies',
+    result: '/result',
     why: '/why'
 }
 

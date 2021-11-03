@@ -30,6 +30,11 @@ function App() {
                         title={texts.technologies.title}
                         subtitle={texts.technologies.subtitle}/>
                 </Route>
+                <Route path={links.result}>
+                    <TextContent
+                        title={texts.result.title}
+                        subtitle={texts.result.subtitle}/>
+                </Route>
                 <Route path={links.why}>
                     <TextContent
                         title={texts.why.title}
