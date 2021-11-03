@@ -1,4 +1,6 @@
 .navbar__link_active {
     color: #437DFF;
     pointer-events: none;
+    font-size: 28px;
+    text-transform: capitalize;
 }

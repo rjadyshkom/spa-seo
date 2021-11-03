@@ -1,0 +1,14 @@
+.subnav__item {
+    list-style-type: none;
+    font-size: 32px;
+    line-height: 37px;
+    padding: 20px 50px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.subnav__item:last-of-type {
+    margin-right: 0;
+}
