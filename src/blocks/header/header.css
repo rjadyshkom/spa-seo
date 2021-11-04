@@ -5,4 +5,6 @@
     grid-template-columns: 1fr;
     align-items: center;
     position: relative;
+    margin: 0;
+    padding: 20px 0;
 }
