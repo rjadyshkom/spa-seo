@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "./Link";
 import Seo from "../helpers/Seo";
+import Emoji from "../helpers/Emoji";
 
 function Links(props) {
     return (
@@ -19,6 +20,7 @@ function Links(props) {
                         />
                     ))}
                 </nav>
+                <Emoji emoji={props.emoji}/>
             </article>
         </>
     )

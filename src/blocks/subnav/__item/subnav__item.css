@@ -5,8 +5,8 @@
     padding: 20px 50px;
     background-color: #E8E8E8;
     border-radius: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    min-width: 240px;
 }
 
 .subnav__item:last-of-type {

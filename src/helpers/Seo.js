@@ -1,7 +1,7 @@
 import React from "react"
-import {Helmet} from "react-helmet"
+import {Helmet} from "react-helmet-async"
 
-function Seo({title, description, keywords, meta = []}) {
+function Seo({title, description, keywords, favicon, meta = [], link = []}) {
     return (
         <Helmet title={title}
                 htmlAttributes={{lang: "ru"}}
@@ -15,6 +15,14 @@ function Seo({title, description, keywords, meta = []}) {
                         content: keywords
                     }
                 ]}
+                link={[
+                    {
+                        rel: 'icon',
+                        type: 'image/png',
+                        href: favicon
+                    }
+                ]}
+
         />
     )
 }

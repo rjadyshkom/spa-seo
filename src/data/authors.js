@@ -6,9 +6,15 @@ const authors = [
 
     },
     {
-        link: 'https://habr.com/ru/company/rshb/blog/529636/',
+        link: 'https://habr.com/ru/company/rshb/blog/529636',
         name: 'Антон',
         description: 'Написал статью'
+
+    },
+    {
+        link: 'https://github.com/rjadyshkom/spa-seo',
+        name: 'GitHub',
+        description: 'Сохранил исходник'
 
     }
 ]

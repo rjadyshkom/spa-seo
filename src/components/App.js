@@ -17,50 +17,58 @@ function App() {
                     <Article
                         title={spa.title}
                         subtitle={spa.description}
-                        keywords={spa.keywords}/>
+                        keywords={spa.keywords}
+                        emoji={spa.emoji}/>
                 </Route>
                 <Route path={problem.link}>
                     <Article
                         title={problem.title}
                         subtitle={problem.description}
-                        keywords={problem.keywords}/>
+                        keywords={problem.keywords}
+                        emoji={problem.emoji}/>
                 </Route>
                 <Route path={task.link}>
                     <Article
                         title={task.title}
                         subtitle={task.description}
-                        keywords={task.keywords}/>
+                        keywords={task.keywords}
+                        emoji={task.emoji}/>
                 </Route>
                 <Route path={solution.link}>
                     <Article
                         title={solution.title}
                         subtitle={solution.description}
-                        keywords={solution.keywords}/>
+                        keywords={solution.keywords}
+                        emoji={solution.emoji}/>
                 </Route>
                 <Route path={technologies.link}>
                     <Links title={technologies.title}
                            data={repos}
                            subtitle={technologies.description}
-                           keywords={technologies.keywords}/>
+                           keywords={technologies.keywords}
+                           emoji={technologies.emoji}/>
                 </Route>
                 <Route path={result.link}>
                     <Article
                         title={result.title}
                         subtitle={result.description}
-                        keywords={result.keywords}/>
+                        keywords={result.keywords}
+                        emoji={result.emoji}/>
                 </Route>
                 <Route path={why.link}>
                     <Article
                         title={why.title}
                         subtitle={why.description}
-                        keywords={why.keywords}/>
+                        keywords={why.keywords}
+                        emoji={why.emoji}/>
                 </Route>
                 <Route path={who.link}>
                     <Links
                         title={who.title}
                         data={authors}
                         subtitle={who.description}
-                        keywords={who.keywords}/>
+                        keywords={who.keywords}
+                        emoji={who.emoji}/>
                 </Route>
             </Switch>
 
