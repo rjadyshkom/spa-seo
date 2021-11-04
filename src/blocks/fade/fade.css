@@ -1,0 +1,5 @@
+.fade {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}

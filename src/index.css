@@ -12,3 +12,11 @@
 @import url(./blocks/subnav/__item/subnav__item.css);
 @import url(./blocks/subnav/__description/subnav__description.css);
 @import url(./blocks/emoji/emoji.css);
+@import url(./blocks/fade/fade.css);
+@import url(./blocks/fade/_direction/fade_direction_in.css);
+@import url(./blocks/fade/_direction/fade_direction_out.css);
+
+
+
+
+
