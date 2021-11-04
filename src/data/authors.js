@@ -2,13 +2,13 @@ const authors = [
     {
         link: 'https://t.me/jessychrist',
         name: 'Сергей',
-        description: 'Автор сайта'
+        description: 'Сделал сайт'
 
     },
     {
         link: 'https://habr.com/ru/company/rshb/blog/529636/',
         name: 'Антон',
-        description: 'Автор статьи'
+        description: 'Написал статью'
 
     }
 ]
