@@ -6,9 +6,11 @@ import Links from "./Links";
 import content from "../data/content";
 import repos from "../data/repos";
 import authors from "../data/authors";
+import useVH from "react-vh";
 
 function App() {
     const [spa, problem, task, solution, technologies, result, why, who] = content;
+    useVH();
     return (
         <>
             <Header/>

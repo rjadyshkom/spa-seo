@@ -12,3 +12,11 @@
 .subnav__item:last-of-type {
     margin-right: 0;
 }
+
+@media screen and (max-width: 960px) {
+    .subnav__item {
+        min-width: inherit;
+        width: 100%;
+        margin-right: 0;
+    }
+}

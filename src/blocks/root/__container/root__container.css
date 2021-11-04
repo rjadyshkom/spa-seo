@@ -3,7 +3,6 @@
     margin: auto;
     max-width: 1440px;
     min-width: 320px;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
