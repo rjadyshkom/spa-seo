@@ -3,55 +3,54 @@ import {Route, Switch} from "react-router-dom";
 import Header from "./Header";
 import Article from "./Article";
 import Links from "./Links";
-import routes from "../data/routes";
-import titles from "../data/titles";
-import descriptions from "../data/descriptions";
-import links from "../data/links";
+import content from "../data/content";
+import repos from "../data/repos";
 import authors from "../data/authors";
 
 function App() {
+    const [spa, problem, task, solution, technologies, result, why, who] = content;
     return (
         <>
             <Header/>
             <Switch>
-                <Route exact path={routes.home}>
+                <Route exact path={spa.link}>
                     <Article
-                        title={titles.spa}
-                        subtitle={descriptions.spa}/>
+                        title={spa.title}
+                        subtitle={spa.description}/>
                 </Route>
-                <Route path={routes.problem}>
+                <Route path={problem.link}>
                     <Article
-                        title={titles.problem}
-                        subtitle={descriptions.problem}/>
+                        title={problem.title}
+                        subtitle={problem.description}/>
                 </Route>
-                <Route path={routes.task}>
+                <Route path={task.link}>
                     <Article
-                        title={titles.task}
-                        subtitle={descriptions.task}/>
+                        title={task.title}
+                        subtitle={task.description}/>
                 </Route>
-                <Route path={routes.solution}>
+                <Route path={solution.link}>
                     <Article
-                        title={titles.solution}
-                        subtitle={descriptions.solution}/>
+                        title={solution.title}
+                        subtitle={solution.description}/>
                 </Route>
-                <Route path={routes.technologies}>
-                    <Links title={titles.technologies}
-                           data={links}
+                <Route path={technologies.link}>
+                    <Links title={technologies.title}
+                           data={repos}
                     />
                 </Route>
-                <Route path={routes.result}>
+                <Route path={result.link}>
                     <Article
-                        title={titles.result}
-                        subtitle={descriptions.result}/>
+                        title={result.title}
+                        subtitle={result.description}/>
                 </Route>
-                <Route path={routes.why}>
+                <Route path={why.link}>
                     <Article
-                        title={titles.why}
-                        subtitle={descriptions.why}/>
+                        title={why.title}
+                        subtitle={why.description}/>
                 </Route>
-                <Route path={routes.who}>
+                <Route path={who.link}>
                     <Links
-                        title={titles.who}
+                        title={who.title}
                         data={authors}/>
                 </Route>
             </Switch>

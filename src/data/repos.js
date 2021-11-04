@@ -1,4 +1,4 @@
-const links = [
+const repos = [
     {
         link: 'https://github.com/stereobooster/react-snap',
         name: 'React-Snap',
@@ -13,4 +13,4 @@ const links = [
     }
 ]
 
-export default links;
+export default repos;
