@@ -1,12 +1,16 @@
-const links = {
-    home: '/',
-    problem: '/problem',
-    task: '/task',
-    solution: '/solution',
-    technologies: '/technologies',
-    result: '/result',
-    why: '/why',
-    who: '/who'
-}
+const links = [
+    {
+        link: 'https://github.com/stereobooster/react-snap',
+        name: 'React-Snap',
+        description: 'Для пререндеринга'
+
+    },
+    {
+        link: 'https://github.com/nfl/react-helmet',
+        name: 'React-Helmet',
+        description: 'Для meta-тегов'
+
+    }
+]
 
 export default links;
