@@ -9,7 +9,8 @@ function Links(props) {
             <Seo
                 title={props.title}
                 description={props.subtitle}
-                keywords={props.keywords}/>
+                keywords={props.keywords}
+                favicon={props.favicon}/>
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <nav className="subnav">
