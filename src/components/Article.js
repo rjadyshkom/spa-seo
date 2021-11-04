@@ -13,7 +13,8 @@ function Article(props) {
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <p className="subtitle">{props.subtitle}</p>
-                <Emoji emoji={props.emoji}/>
+                <Emoji emoji={props.emoji}
+                       title={props.title}/>
             </article>
         </>
 

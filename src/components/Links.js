@@ -21,7 +21,8 @@ function Links(props) {
                         />
                     ))}
                 </nav>
-                <Emoji emoji={props.emoji}/>
+                <Emoji emoji={props.emoji}
+                       title={props.title}/>
             </article>
         </>
     )
