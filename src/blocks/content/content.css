@@ -5,6 +5,13 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    min-height: calc(var(--vh, 1vh) * 65);
+    min-height: calc(var(--vh, 1vh) * 75);
     padding: 50px 0;
+}
+
+@media screen and (max-width: 768px) {
+    /*noinspection CssUnresolvedCustomProperty*/
+    .content {
+        min-height: calc(var(--vh, 1vh) * 65);
+    }
 }
