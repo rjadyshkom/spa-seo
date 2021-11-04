@@ -16,42 +16,51 @@ function App() {
                 <Route exact path={spa.link}>
                     <Article
                         title={spa.title}
-                        subtitle={spa.description}/>
+                        subtitle={spa.description}
+                        keywords={spa.keywords}/>
                 </Route>
                 <Route path={problem.link}>
                     <Article
                         title={problem.title}
-                        subtitle={problem.description}/>
+                        subtitle={problem.description}
+                        keywords={problem.keywords}/>
                 </Route>
                 <Route path={task.link}>
                     <Article
                         title={task.title}
-                        subtitle={task.description}/>
+                        subtitle={task.description}
+                        keywords={task.keywords}/>
                 </Route>
                 <Route path={solution.link}>
                     <Article
                         title={solution.title}
-                        subtitle={solution.description}/>
+                        subtitle={solution.description}
+                        keywords={solution.keywords}/>
                 </Route>
                 <Route path={technologies.link}>
                     <Links title={technologies.title}
                            data={repos}
-                    />
+                           subtitle={technologies.description}
+                           keywords={technologies.keywords}/>
                 </Route>
                 <Route path={result.link}>
                     <Article
                         title={result.title}
-                        subtitle={result.description}/>
+                        subtitle={result.description}
+                        keywords={result.keywords}/>
                 </Route>
                 <Route path={why.link}>
                     <Article
                         title={why.title}
-                        subtitle={why.description}/>
+                        subtitle={why.description}
+                        keywords={why.keywords}/>
                 </Route>
                 <Route path={who.link}>
                     <Links
                         title={who.title}
-                        data={authors}/>
+                        data={authors}
+                        subtitle={who.description}
+                        keywords={who.keywords}/>
                 </Route>
             </Switch>
 
