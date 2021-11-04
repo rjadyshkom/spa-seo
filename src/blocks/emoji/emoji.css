@@ -1,3 +1,5 @@
 .emoji {
-    font-size: 80px;
+    max-width: 110px;
+    max-height: 110px;
+    object-fit: contain;
 }

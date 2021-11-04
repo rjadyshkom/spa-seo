@@ -2,15 +2,11 @@ import React from "react"
 
 function Emoji(props) {
     return (
-        <span
+        <img
             className="emoji"
-            role="img"
-            aria-label={props.label ? props.label : ""}
-            aria-hidden={props.label ? "false" : "true"}
-        >
-        {props.emoji}
-    </span>
-
+            alt={props.title + 'эмоджи emodji'}
+            src={props.emoji}
+        />
     )
 }
 
