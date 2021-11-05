@@ -2,6 +2,7 @@ import React from 'react';
 import Link from './Link';
 import Seo from '../helpers/Seo';
 import Emoji from '../helpers/Emoji';
+import {baseUrl} from "../data/constants";
 
 function Links(props) {
 
@@ -13,7 +14,7 @@ function Links(props) {
                 keywords={props.keywords}
                 favicon={props.favicon}
                 ogImage={props.ogImage}
-                canonical={props.link}
+                canonical={`${baseUrl}${props.canonical}`}
             />
             <article className="content">
                 <h1 className="title">{props.title}</h1>
