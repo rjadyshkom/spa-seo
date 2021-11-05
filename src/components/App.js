@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react";
-import {Route, Switch, useLocation} from "react-router-dom";
-import Header from "./Header";
-import Article from "./Article";
-import Links from "./Links";
-import content from "../data/content";
-import repos from "../data/repos";
-import authors from "../data/authors";
-import useVH from "react-vh";
+import React, {useEffect, useState} from 'react';
+import {Route, Switch, useLocation} from 'react-router-dom';
+import Header from './Header';
+import Article from './Article';
+import Links from './Links';
+import content from '../data/content';
+import repos from '../data/repos';
+import authors from '../data/authors';
+import useVH from 'react-vh';
 
 function App() {
     const location = useLocation();
@@ -39,6 +39,8 @@ function App() {
                             keywords={spa.keywords}
                             emoji={spa.image}
                             favicon={spa.image}
+                            ogImage={spa.ogImage}
+                            canonical={spa.link}
                         />
                     </Route>
 
@@ -49,6 +51,8 @@ function App() {
                             keywords={problem.keywords}
                             emoji={problem.image}
                             favicon={problem.image}
+                            ogImage={problem.ogImage}
+                            canonical={problem.link}
                         />
                     </Route>
 
@@ -59,6 +63,8 @@ function App() {
                             keywords={task.keywords}
                             emoji={task.image}
                             favicon={task.image}
+                            ogImage={task.ogImage}
+                            canonical={task.link}
                         />
                     </Route>
 
@@ -69,6 +75,9 @@ function App() {
                             keywords={solution.keywords}
                             emoji={solution.image}
                             favicon={solution.image}
+                            ogImage={solution.ogImage}
+                            canonical={solution.link}
+
                         />
                     </Route>
 
@@ -79,6 +88,8 @@ function App() {
                                keywords={technologies.keywords}
                                emoji={technologies.image}
                                favicon={technologies.image}
+                               ogImage={technologies.ogImage}
+                               canonical={technologies.link}
                         />
                     </Route>
 
@@ -89,6 +100,8 @@ function App() {
                             keywords={result.keywords}
                             emoji={result.image}
                             favicon={result.image}
+                            ogImage={result.ogImage}
+                            canonical={result.link}
                         />
                     </Route>
 
@@ -99,6 +112,8 @@ function App() {
                             keywords={why.keywords}
                             emoji={why.image}
                             favicon={why.image}
+                            ogImage={why.ogImage}
+                            canonical={why.link}
                         />
                     </Route>
 
@@ -110,6 +125,8 @@ function App() {
                             keywords={who.keywords}
                             emoji={who.image}
                             favicon={who.image}
+                            ogImage={who.ogImage}
+                            canonical={who.link}
                         />
                     </Route>
 
@@ -120,6 +137,7 @@ function App() {
                             keywords={notFound.keywords}
                             emoji={notFound.image}
                             favicon={notFound.image}
+                            ogImage={notFound.ogImage}
                         />
                     </Route>
                 </Switch>
