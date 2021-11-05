@@ -73,7 +73,7 @@ function Seo({
                     },
                     {
                         property: 'og:type',
-                        content: 'website'
+                        content: 'article'
                     },
                     {
                         property: 'article:author',
