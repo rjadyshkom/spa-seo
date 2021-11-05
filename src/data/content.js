@@ -6,13 +6,14 @@ import technologies from '../images/technologies.png';
 import result from '../images/result.png';
 import why from '../images/why.png';
 import who from '../images/who.png';
+import notFound from '../images/not-found.png'
 
 const content = [
     {
         title: 'SPA',
         link: '/',
         description: 'SPA (Single Page Application) — это веб-приложение или веб-сайт, использующий единственный HTML-документ как оболочку для всех веб-страниц и организующий взаимодействие с пользователем через динамически подгружаемые HTML, CSS, JavaScript.',
-        keywords: 'SPA, SEO, Single Page Application',
+        keywords: 'SPA, SEO, Single Page Application, spa index, spa prerender, react prerender, how to index spa',
         image: spa
     },
     {
@@ -63,6 +64,14 @@ const content = [
         description: 'Сергей Митрофанов сделал сайт, Антон Россельхоз банк написал статью',
         keywords: 'Сергей Митрофанов, Антон Россельхоз банк full-stack developer',
         image: who
+    },
+    // последний элемент массива исключён из навигации
+    {
+        title: '404',
+        link: '*',
+        description: 'Страница не найдена',
+        keywords: 'SPA, SEO, Single Page Application, spa index, spa prerender, react prerender, how to index spa',
+        image: notFound
     }
 ]
 

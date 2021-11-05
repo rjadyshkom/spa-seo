@@ -10,7 +10,7 @@ function NavBar(props) {
                     item={item}
                     key={key}
                 />
-            ))}
+            )).slice(0, -1)}
         </nav>
     )
 }

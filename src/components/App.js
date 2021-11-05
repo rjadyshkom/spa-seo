@@ -12,7 +12,7 @@ function App() {
     const location = useLocation();
     const [currentLocation, setCurrentLocation] = useState(location);
     const [fade, setFade] = useState('fade_direction_in');
-    const [spa, problem, task, solution, technologies, result, why, who] = content;
+    const [spa, problem, task, solution, technologies, result, why, who, notFound] = content;
 
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
@@ -110,6 +110,16 @@ function App() {
                             keywords={who.keywords}
                             emoji={who.image}
                             favicon={who.image}
+                        />
+                    </Route>
+
+                    <Route path='*'>
+                        <Article
+                            title={notFound.title}
+                            subtitle={notFound.description}
+                            keywords={notFound.keywords}
+                            emoji={notFound.image}
+                            favicon={notFound.image}
                         />
                     </Route>
                 </Switch>
