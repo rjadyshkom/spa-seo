@@ -44,8 +44,48 @@ function Seo({
                         content: ogImage
                     },
                     {
+                        property: 'twitter:card',
+                        content: 'summary_large_image'
+                    },
+                    {
+                        property: 'twitter:image',
+                        content: ogImage
+                    },
+                    {
+                        property: 'og:image:width',
+                        content: '1200'
+                    },
+                    {
+                        property: 'og:image:height',
+                        content: '630'
+                    },
+                    {
                         property: 'og:description',
                         content: description
+                    },
+                    {
+                        property: 'og:url',
+                        content: canonical
+                    },
+                    {
+                        property: 'og:locale',
+                        content: 'ru_RU'
+                    },
+                    {
+                        property: 'og:type',
+                        content: 'website'
+                    },
+                    {
+                        property: 'article:author',
+                        content: 'Сергей Митрофанов @jessychrist'
+                    },
+                    {
+                        property: 'article:tag',
+                        content: 'SPA SEO'
+                    },
+                    {
+                        property: 'article:published_time',
+                        content: '2021-11-02T13:30:00+03:00'
                     }
                 ]}
                 link={[
