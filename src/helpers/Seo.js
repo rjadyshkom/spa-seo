@@ -53,7 +53,7 @@ function Seo({
                     },
                     {
                         property: 'og:image:width',
-                        content: '1200'
+                        content: '1300'
                     },
                     {
                         property: 'og:image:height',
@@ -73,19 +73,7 @@ function Seo({
                     },
                     {
                         property: 'og:type',
-                        content: 'article'
-                    },
-                    {
-                        property: 'article:author',
-                        content: 'Сергей Митрофанов @jessychrist'
-                    },
-                    {
-                        property: 'article:tag',
-                        content: 'SPA SEO'
-                    },
-                    {
-                        property: 'article:published_time',
-                        content: '2021-11-02T13:30:00+03:00'
+                        content: 'website'
                     }
                 ]}
                 link={[
