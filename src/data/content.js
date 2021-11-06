@@ -85,7 +85,7 @@ const content = [
     // последний элемент массива исключён из навигации
     {
         title: '404',
-        link: '/404',
+        link: '*',
         description: 'Страница не найдена',
         keywords: 'SPA, SEO, Single Page Application, spa index, spa prerender, react prerender, how to index spa',
         image: notFound,
