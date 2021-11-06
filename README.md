@@ -1,4 +1,4 @@
-## Индексирование SPA <sup><sup>на примере [spa.ohuel.ru](https://spa.ohuel.ru) </sup>
+## Индексирование SPA <sup>на примере [spa.ohuel.ru](https://spa.ohuel.ru)</sup>
 
 SPA (Single Page Application) — это веб-приложение или веб-сайт, использующий единственный HTML-документ как оболочку для всех веб-страниц и организующий взаимодействие с пользователем через динамически подгружаемые HTML, CSS, JavaScript.
 
