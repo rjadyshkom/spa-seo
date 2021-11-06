@@ -32,23 +32,27 @@ function Seo({
                         content: keywords
                     },
                     {
-                        property: 'og:site_name',
-                        content: siteName
+                        property: 'og:type',
+                        content: 'website'
                     },
                     {
                         property: 'og:title',
                         content: title
                     },
                     {
+                        property: 'og:description',
+                        content: description
+                    },
+                    {
+                        property: 'og:url',
+                        content: canonical
+                    },
+                    {
+                        property: 'og:site_name',
+                        content: siteName
+                    },
+                    {
                         property: 'og:image',
-                        content: ogImage
-                    },
-                    {
-                        property: 'twitter:card',
-                        content: 'summary_large_image'
-                    },
-                    {
-                        property: 'twitter:image',
                         content: ogImage
                     },
                     {
@@ -60,20 +64,28 @@ function Seo({
                         content: '630'
                     },
                     {
-                        property: 'og:description',
+                        property: 'og:locale',
+                        content: 'ru'
+                    },
+                    {
+                        property: 'twitter:title',
+                        content: title
+                    },
+                    {
+                        property: 'twitter:description',
                         content: description
                     },
                     {
-                        property: 'og:url',
-                        content: canonical
+                        property: 'twitter:card',
+                        content: 'summary_large_image'
                     },
                     {
-                        property: 'og:locale',
-                        content: 'ru_RU'
+                        property: 'twitter:image',
+                        content: ogImage
                     },
                     {
-                        property: 'og:type',
-                        content: 'website'
+                        property: 'vk:image',
+                        content: ogImage
                     }
                 ]}
                 link={[
