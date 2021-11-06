@@ -44,7 +44,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={problem.link}>
+                    <Route exact path={problem.link}>
                         <Article
                             title={problem.title}
                             subtitle={problem.description}
@@ -56,7 +56,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={task.link}>
+                    <Route exact path={task.link}>
                         <Article
                             title={task.title}
                             subtitle={task.description}
@@ -68,7 +68,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={solution.link}>
+                    <Route exact path={solution.link}>
                         <Article
                             title={solution.title}
                             subtitle={solution.description}
@@ -81,7 +81,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={technologies.link}>
+                    <Route exact path={technologies.link}>
                         <Links title={technologies.title}
                                data={repos}
                                subtitle={technologies.description}
@@ -93,7 +93,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={result.link}>
+                    <Route exact path={result.link}>
                         <Article
                             title={result.title}
                             subtitle={result.description}
@@ -105,7 +105,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={why.link}>
+                    <Route exact path={why.link}>
                         <Article
                             title={why.title}
                             subtitle={why.description}
@@ -117,7 +117,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={who.link}>
+                    <Route exact path={who.link}>
                         <Links
                             title={who.title}
                             data={authors}
