@@ -130,7 +130,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path='*'>
+                    <Route path={notFound.link}>
                         <Article
                             title={notFound.title}
                             subtitle={notFound.description}
