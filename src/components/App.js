@@ -4,8 +4,7 @@ import Header from './Header';
 import Article from './Article';
 import Links from './Links';
 import content from '../data/content';
-import repos from '../data/repos';
-import authors from '../data/authors';
+import {repos, authors} from '../utils/constants';
 import useVH from 'react-vh';
 
 function App() {

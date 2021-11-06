@@ -2,7 +2,7 @@ import React from 'react';
 import Link from './Link';
 import Seo from '../helpers/Seo';
 import Emoji from '../helpers/Emoji';
-import {baseUrl} from "../data/constants";
+import {baseUrl} from "../utils/constants";
 
 function Links(props) {
 
