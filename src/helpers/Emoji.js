@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Emoji(props) {
+export function Emoji(props) {
 
     return (
         <img
@@ -10,5 +10,3 @@ function Emoji(props) {
         />
     )
 }
-
-export default Emoji;

@@ -1,9 +1,8 @@
 import React from 'react';
-import NavBar from './NavBar';
-import content from '../data/content';
+import {NavBar} from './NavBar';
+import {content} from '../data/content';
 
-
-function Header() {
+export function Header() {
 
     return (
         <div className="header">
@@ -11,5 +10,3 @@ function Header() {
         </div>
     )
 }
-
-export default Header;

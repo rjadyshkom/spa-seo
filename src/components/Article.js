@@ -1,9 +1,9 @@
 import React from 'react';
-import Seo from '../helpers/Seo';
-import Emoji from '../helpers/Emoji';
+import {Seo} from '../helpers/Seo';
+import {Emoji} from '../helpers/Emoji';
 import {baseUrl} from '../utils/constants';
 
-function Article(props) {
+export function Article(props) {
 
     return (
         <>
@@ -25,5 +25,3 @@ function Article(props) {
         </>
     )
 }
-
-export default Article;

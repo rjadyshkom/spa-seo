@@ -17,7 +17,7 @@ import ogWho from '../images/og-who.jpg';
 import notFound from '../images/not-found.png'
 import ogNotFound from '../images/og-not-found.jpg';
 
-const content = [
+export const content = [
     {
         title: 'SPA',
         link: '/',
@@ -92,5 +92,3 @@ const content = [
         ogImage: ogNotFound
     }
 ]
-
-export default content;

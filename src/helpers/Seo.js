@@ -2,7 +2,7 @@ import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {siteName} from '../utils/constants';
 
-function Seo({
+export function Seo({
                  title,
                  description,
                  keywords,
@@ -95,5 +95,3 @@ function Seo({
         />
     )
 }
-
-export default Seo;

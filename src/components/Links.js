@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from './Link';
-import Seo from '../helpers/Seo';
-import Emoji from '../helpers/Emoji';
+import {Link} from './Link';
+import {Seo} from '../helpers/Seo';
+import {Emoji} from '../helpers/Emoji';
 import {baseUrl} from "../utils/constants";
 
-function Links(props) {
+export function Links(props) {
 
     return (
         <>
@@ -33,5 +33,3 @@ function Links(props) {
         </>
     )
 }
-
-export default Links;

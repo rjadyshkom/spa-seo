@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {Route, Switch, useLocation} from 'react-router-dom';
-import Header from './Header';
-import Article from './Article';
-import Links from './Links';
-import content from '../data/content';
+import {Header} from './Header';
+import {Article} from './Article';
+import {Links} from './Links';
+import {content} from '../data/content';
 import {repos, authors} from '../utils/constants';
 import useVH from 'react-vh';
 

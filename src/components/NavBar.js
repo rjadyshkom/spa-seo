@@ -1,7 +1,7 @@
 import React from 'react';
-import NavItem from './NavItem';
+import {NavItem} from './NavItem';
 
-function NavBar(props) {
+export function NavBar(props) {
 
     return (
         <nav className="navbar">
@@ -14,5 +14,3 @@ function NavBar(props) {
         </nav>
     )
 }
-
-export default NavBar;

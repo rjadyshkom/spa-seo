@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-function NavItem({item}) {
+export function NavItem({item}) {
 
     return (
         <NavLink exact to={item.link}
@@ -11,6 +11,4 @@ function NavItem({item}) {
         </NavLink>
     )
 }
-
-export default NavItem;
 

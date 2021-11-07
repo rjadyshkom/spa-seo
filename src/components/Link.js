@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Link({item}) {
+export function Link({item}) {
 
     return (
         <li className="subnav__item">
@@ -12,5 +12,3 @@ function Link({item}) {
         </li>
     )
 }
-
-export default Link;
