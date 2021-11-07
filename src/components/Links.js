@@ -16,6 +16,7 @@ export function Links(props) {
                 ogImage={props.ogImage}
                 canonical={`${baseUrl}${props.canonical}`}
             />
+
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <nav className="subnav">

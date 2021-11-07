@@ -15,6 +15,7 @@ export function Article(props) {
                 ogImage={props.ogImage}
                 canonical={`${baseUrl}${props.canonical}`}
             />
+
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <p className="subtitle">{props.subtitle}</p>
