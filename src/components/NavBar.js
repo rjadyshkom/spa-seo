@@ -3,14 +3,27 @@ import {NavItem} from './NavItem';
 
 export function NavBar(props) {
 
+    const data = props.data;
+    const exclude = ['notFound'];
+
+    const navigation = Object.keys(data)
+        .filter(key => !exclude.includes(key))
+        .reduce((obj, key) => {
+            return {
+                ...obj,
+                [key]: data[key]
+            };
+        }, {});
+
     return (
         <nav className="navbar">
-            {props.data.map((item, key) => (
-                <NavItem
-                    item={item}
-                    key={key}
-                />
-            )).slice(0, -1)}
+            {
+                Object.values(navigation).map((item, key) => (
+                    <NavItem
+                        item={item}
+                        key={key}/>
+                ))
+            }
         </nav>
     )
 }

@@ -11,7 +11,7 @@ function App() {
     const location = useLocation();
     const [currentLocation, setCurrentLocation] = useState(location);
     const [fade, setFade] = useState('fade_direction_in');
-    const [spa, problem, task, solution, technologies, result, why, who, notFound] = content;
+    const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
 
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');

@@ -17,8 +17,8 @@ import ogWho from '../images/og-who.jpg';
 import notFound from '../images/not-found.png'
 import ogNotFound from '../images/og-not-found.jpg';
 
-export const content = [
-    {
+export const content = {
+    spa: {
         title: 'SPA',
         link: '/',
         description: 'SPA (Single Page Application) — это веб-приложение или веб-сайт, использующий единственный HTML-документ как оболочку для всех веб-страниц и организующий взаимодействие с пользователем через динамически подгружаемые HTML, CSS, JavaScript.',
@@ -26,7 +26,7 @@ export const content = [
         image: spa,
         ogImage: ogSpa
     },
-    {
+    problem: {
         title: 'Проблема',
         link: '/problem',
         description: 'Поисковые роботы не умеют исполнять JavaScript-код, поэтому при посещении SPA-ресурса «из коробки», они получают пустой index.html и содержимое сайта не индексируется.',
@@ -34,7 +34,7 @@ export const content = [
         image: problem,
         ogImage: ogProblem
     },
-    {
+    task: {
         title: 'Задача',
         link: '/task',
         description: 'С минимальными изменениями в существующем проекте сделать так, чтобы поисковый робот индексировал все страницы SPA-приложения, а также установить для каждой страницы уникальные meta-теги (title, description, keywords ...etc).',
@@ -42,7 +42,7 @@ export const content = [
         image: task,
         ogImage: ogTask
     },
-    {
+    solution: {
         title: 'Решение',
         link: '/solution',
         description: 'Пререндеринг проекта после сборки (проход по всем страницам SPA-приложения и создание их HTML копий).',
@@ -50,7 +50,7 @@ export const content = [
         image: solution,
         ogImage: ogSolution
     },
-    {
+    technologies: {
         title: 'Технологии',
         link: '/technologies',
         description: 'React-snap для пререндеринга, React-helmet для мета-тегов',
@@ -58,7 +58,7 @@ export const content = [
         image: technologies,
         ogImage: ogTechnologies
     },
-    {
+    result: {
         title: 'Результат',
         link: '/result',
         description: 'Ваше SPA полностью проиндексировано, сервер не справляется с наплывом посетителей.',
@@ -66,7 +66,7 @@ export const content = [
         image: result,
         ogImage: ogResult
     },
-    {
+    why: {
         title: 'Зачем',
         link: '/why',
         description: 'Проверить решение на практике, освежить в памяти React, JavaScript, БЭМ, роутинг, компонентный подход и вёрстку.',
@@ -74,7 +74,7 @@ export const content = [
         image: why,
         ogImage: ogWhy
     },
-    {
+    who: {
         title: 'Кто',
         link: '/who',
         description: 'Сергей Митрофанов сделал сайт, Антон Россельхоз банк написал статью, GitHub сохранил исходник.',
@@ -82,8 +82,8 @@ export const content = [
         image: who,
         ogImage: ogWho
     },
-    // последний элемент массива исключён из навигации
-    {
+    // исключён из навигации
+    notFound: {
         title: '404',
         link: '*',
         description: 'Страница не найдена',
@@ -91,4 +91,4 @@ export const content = [
         image: notFound,
         ogImage: ogNotFound
     }
-]
+}

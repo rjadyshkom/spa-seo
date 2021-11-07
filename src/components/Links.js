@@ -19,12 +19,13 @@ export function Links(props) {
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <nav className="subnav">
-                    {props.data.map((item, key) => (
-                        <Link
-                            item={item}
-                            key={key}
-                        />
-                    ))}
+                    {
+                        Object.values(props.data).map((item, key) => (
+                            <Link
+                                item={item}
+                                key={key}/>
+                        ))
+                    }
                 </nav>
                 <Emoji emoji={props.emoji}
                        title={props.title}
