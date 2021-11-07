@@ -77,7 +77,7 @@ const content = [
     {
         title: 'Кто',
         link: '/who',
-        description: 'Сергей Митрофанов сделал сайт, Антон Россельхоз банк написал статью',
+        description: 'Сергей Митрофанов сделал сайт, Антон Россельхоз банк написал статью, GitHub сохранил исходник.',
         keywords: 'Сергей Митрофанов, Антон Россельхоз банк full-stack developer',
         image: who,
         ogImage: ogWho
