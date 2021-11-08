@@ -24,7 +24,8 @@ export function Links(props) {
                         Object.values(props.data).map((item, key) => (
                             <Link
                                 item={item}
-                                key={key}/>
+                                key={key}
+                            />
                         ))
                     }
                 </nav>

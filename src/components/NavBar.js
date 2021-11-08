@@ -21,7 +21,8 @@ export function NavBar(props) {
                 Object.values(navigation).map((item, key) => (
                     <NavItem
                         item={item}
-                        key={key}/>
+                        key={key}
+                    />
                 ))
             }
         </nav>
