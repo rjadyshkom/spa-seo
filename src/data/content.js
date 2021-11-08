@@ -1,21 +1,16 @@
-import spa from '../images/spa.png';
+import {spa, problem, task, solution, technologies, result, why} from '../utils/constants';
 import ogSpa from '../images/og-spa.jpg';
-import problem from '../images/problem.png';
 import ogProblem from '../images/og-problem.jpg';
-import task from '../images/task.png';
 import ogTask from '../images/og-task.jpg';
-import solution from '../images/solution.png';
 import ogSolution from '../images/og-solution.jpg';
-import technologies from '../images/technologies.png';
 import ogTechnologies from '../images/og-technologies.jpg';
-import result from '../images/result.png';
 import ogResult from '../images/og-result.jpg';
-import why from '../images/why.png';
 import ogWhy from '../images/og-why.jpg';
-import who from '../images/who.png';
 import ogWho from '../images/og-who.jpg';
 import notFound from '../images/not-found.png'
 import ogNotFound from '../images/og-not-found.jpg';
+// тест индексации инлайновых изображений в яндекс и гугл
+import who from '../images/who.png';
 
 export const content = {
     spa: {

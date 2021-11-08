@@ -35,4 +35,12 @@ export const authors = [
         description: 'Сохранил исходник'
 
     }
-]
+];
+
+export const spa = process.env.PUBLIC_URL + '/spa.png';
+export const problem = process.env.PUBLIC_URL + '/problem.png';
+export const task = process.env.PUBLIC_URL + '/task.png';
+export const solution = process.env.PUBLIC_URL + '/solution.png';
+export const technologies = process.env.PUBLIC_URL + '/technologies.png';
+export const result = process.env.PUBLIC_URL + '/result.png';
+export const why = process.env.PUBLIC_URL + '/why.png';
