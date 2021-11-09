@@ -14,6 +14,8 @@ function App() {
     const [fade, setFade] = useState('fade_direction_in');
     const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
 
+    useVH();
+
     function handleThemeChange(theme) {
         setTheme(theme)
         if (theme === 'dark')
@@ -27,16 +29,18 @@ function App() {
     }, [location, currentLocation]);
 
     useEffect(() => {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => handleThemeChange(e.matches ? 'dark' : 'light'));
-        handleThemeChange(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', e => handleThemeChange(e.matches ? 'dark' : 'light'));
+
+        handleThemeChange(window.matchMedia('(prefers-color-scheme: dark)')
+            .matches ? 'dark' : 'light')
+
         return () => {
             window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
             });
         }
     }, []);
 
-
-    useVH();
     return (
         <>
             <Header
