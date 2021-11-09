@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: light) {
+    .root_dark {
+        --background-color: #444950;
+        --text-color: #f5f6f7;
+        --link-color: #9cbbff;
+        --link-color-active: #437dff;
+        --border-color: #f5f6f7;
+        --subnav-item-background: #383d44;
+    }
+}

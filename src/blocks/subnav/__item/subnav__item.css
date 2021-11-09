@@ -3,10 +3,11 @@
     font-size: 32px;
     line-height: 37px;
     padding: 20px 50px;
-    background-color: #E8E8E8;
+    background-color: var(--subnav-item-background);
     border-radius: 20px;
     margin: 0 10px 10px 0;
     min-width: 240px;
+    transition: background-color .3s ease-in-out;
 }
 
 .subnav__item:last-of-type {

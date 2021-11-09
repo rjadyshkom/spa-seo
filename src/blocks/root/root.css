@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
-    background-color: #F0F1F3;
+    background-color: var(--background-color);
+    color: var(--text-color);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -11,4 +12,17 @@
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
     position: relative;
+    user-select: none;
+    transition: background-color .3s ease-in-out, color .6s ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #f0f1f3;
+        --text-color: #000;
+        --link-color: #9cbbff;
+        --link-color-active: #437dff;
+        --border-color: #000;
+        --subnav-item-background: #e8e8e8;
+    }
 }

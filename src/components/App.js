@@ -13,9 +13,13 @@ function App() {
     const [fade, setFade] = useState('fade_direction_in');
     const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
 
+
+
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
     }, [location, currentLocation]);
+
+
 
     useVH();
     return (

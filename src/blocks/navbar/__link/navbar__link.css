@@ -1,13 +1,9 @@
 .navbar__link {
-    color: #9CBBFF;
+    color: var(--link-color);
     text-decoration: none;
     text-transform: lowercase;
     font-size: 20px;
     line-height: 30px;
     margin-right: 20px;
     transition: font-size .2s ease-in-out;
-}
-
-.navbar__link:last-of-type {
-    margin-right: 0;
 }
