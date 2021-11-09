@@ -7,4 +7,5 @@
     position: relative;
     margin: 0;
     padding: 20px 0;
+    transition: border-bottom-color .3s ease-in-out;
 }

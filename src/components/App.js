@@ -10,21 +10,39 @@ import useVH from 'react-vh';
 function App() {
     const location = useLocation();
     const [currentLocation, setCurrentLocation] = useState(location);
+    const [theme, setTheme] = useState('light');
     const [fade, setFade] = useState('fade_direction_in');
     const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
 
-
+    function handleThemeChange(theme) {
+        setTheme(theme)
+        if (theme === 'dark')
+            document.body.classList.add('root_dark')
+        else
+            document.body.classList.remove('root_dark')
+    }
 
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
     }, [location, currentLocation]);
 
+    useEffect(() => {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => handleThemeChange(e.matches ? 'dark' : 'light'));
+        handleThemeChange(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        return () => {
+            window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
+            });
+        }
+    }, []);
 
 
     useVH();
     return (
         <>
-            <Header/>
+            <Header
+                darkTheme={theme}
+                onThemeChange={handleThemeChange}
+            />
             <div
                 className={`fade ${fade}`}
                 onAnimationEnd={() => {
@@ -40,9 +58,9 @@ function App() {
                             title={spa.title}
                             subtitle={spa.description}
                             keywords={spa.keywords}
-                            emoji={spa.image}
-                            favicon={spa.image}
-                            ogImage={spa.ogImage}
+                            emoji={theme === 'light' ? spa.darkImage : spa.image}
+                            favicon={theme === 'light' ? spa.darkImage : spa.image}
+                            ogImage={theme === 'light' ? spa.darkOgImage : spa.ogImage}
                             canonical={spa.link}
                         />
                     </Route>
@@ -52,9 +70,9 @@ function App() {
                             title={problem.title}
                             subtitle={problem.description}
                             keywords={problem.keywords}
-                            emoji={problem.image}
-                            favicon={problem.image}
-                            ogImage={problem.ogImage}
+                            emoji={theme === 'light' ? problem.darkImage : problem.image}
+                            favicon={theme === 'light' ? problem.darkImage : problem.image}
+                            ogImage={theme === 'light' ? problem.darkOgImage : problem.ogImage}
                             canonical={problem.link}
                         />
                     </Route>
@@ -64,9 +82,9 @@ function App() {
                             title={task.title}
                             subtitle={task.description}
                             keywords={task.keywords}
-                            emoji={task.image}
-                            favicon={task.image}
-                            ogImage={task.ogImage}
+                            emoji={theme === 'light' ? task.darkImage : task.image}
+                            favicon={theme === 'light' ? task.darkImage : task.image}
+                            ogImage={theme === 'light' ? task.darkOgImage : task.ogImage}
                             canonical={task.link}
                         />
                     </Route>
@@ -76,9 +94,9 @@ function App() {
                             title={solution.title}
                             subtitle={solution.description}
                             keywords={solution.keywords}
-                            emoji={solution.image}
-                            favicon={solution.image}
-                            ogImage={solution.ogImage}
+                            emoji={theme === 'light' ? task.darkImage : task.image}
+                            favicon={theme === 'light' ? task.darkImage : task.image}
+                            ogImage={theme === 'light' ? task.darkOgImage : task.ogImage}
                             canonical={solution.link}
 
                         />
@@ -89,9 +107,9 @@ function App() {
                                data={repos}
                                subtitle={technologies.description}
                                keywords={technologies.keywords}
-                               emoji={technologies.image}
-                               favicon={technologies.image}
-                               ogImage={technologies.ogImage}
+                               emoji={theme === 'light' ? technologies.darkImage : technologies.image}
+                               favicon={theme === 'light' ? technologies.darkImage : technologies.image}
+                               ogImage={theme === 'light' ? technologies.darkOgImage : technologies.ogImage}
                                canonical={technologies.link}
                         />
                     </Route>
@@ -101,9 +119,9 @@ function App() {
                             title={result.title}
                             subtitle={result.description}
                             keywords={result.keywords}
-                            emoji={result.image}
-                            favicon={result.image}
-                            ogImage={result.ogImage}
+                            emoji={theme === 'light' ? result.darkImage : result.image}
+                            favicon={theme === 'light' ? result.darkImage : result.image}
+                            ogImage={theme === 'light' ? result.darkOgImage : result.ogImage}
                             canonical={result.link}
                         />
                     </Route>
@@ -113,9 +131,9 @@ function App() {
                             title={why.title}
                             subtitle={why.description}
                             keywords={why.keywords}
-                            emoji={why.image}
-                            favicon={why.image}
-                            ogImage={why.ogImage}
+                            emoji={theme === 'light' ? why.darkImage : why.image}
+                            favicon={theme === 'light' ? why.darkImage : why.image}
+                            ogImage={theme === 'light' ? why.darkOgImage : why.ogImage}
                             canonical={why.link}
                         />
                     </Route>
@@ -126,9 +144,9 @@ function App() {
                             data={authors}
                             subtitle={who.description}
                             keywords={who.keywords}
-                            emoji={who.image}
-                            favicon={who.image}
-                            ogImage={who.ogImage}
+                            emoji={theme === 'light' ? who.darkImage : who.image}
+                            favicon={theme === 'light' ? who.darkImage : who.image}
+                            ogImage={theme === 'light' ? who.darkOgImage : who.ogImage}
                             canonical={who.link}
                         />
                     </Route>
@@ -138,9 +156,9 @@ function App() {
                             title={notFound.title}
                             subtitle={notFound.description}
                             keywords={notFound.keywords}
-                            emoji={notFound.image}
-                            favicon={notFound.image}
-                            ogImage={notFound.ogImage}
+                            emoji={theme === 'light' ? notFound.darkImage : notFound.image}
+                            favicon={theme === 'light' ? notFound.darkImage : notFound.image}
+                            ogImage={theme === 'light' ? notFound.darkOgImage : notFound.ogImage}
                         />
                     </Route>
                 </Switch>

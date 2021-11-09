@@ -1,0 +1,5 @@
+.switcher__image {
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
+}

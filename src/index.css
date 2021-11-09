@@ -16,6 +16,8 @@
 @import url(./blocks/fade/fade.css);
 @import url(./blocks/fade/_direction/fade_direction_in.css);
 @import url(./blocks/fade/_direction/fade_direction_out.css);
+@import url(./blocks/switcher/switcher.css);
+@import url(./blocks/switcher/__image/switcher__image.css);
 
 
 
