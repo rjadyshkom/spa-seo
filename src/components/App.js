@@ -94,9 +94,9 @@ function App() {
                             title={solution.title}
                             subtitle={solution.description}
                             keywords={solution.keywords}
-                            emoji={theme === 'light' ? task.darkImage : task.image}
-                            favicon={theme === 'light' ? task.darkImage : task.image}
-                            ogImage={theme === 'light' ? task.darkOgImage : task.ogImage}
+                            emoji={theme === 'light' ? solution.darkImage : solution.image}
+                            favicon={theme === 'light' ? solution.darkImage : solution.image}
+                            ogImage={theme === 'light' ? solution.darkOgImage : solution.ogImage}
                             canonical={solution.link}
 
                         />
