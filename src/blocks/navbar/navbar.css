@@ -4,3 +4,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@media screen and (max-device-width: 768px) {
+    .navbar {
+        justify-content: flex-start;
+    }
+}
