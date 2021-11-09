@@ -1,3 +1,4 @@
 .switcher {
     cursor: pointer;
+    display: flex;
 }
