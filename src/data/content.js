@@ -41,7 +41,6 @@ export const content = {
     spa: {
         title: 'SPA',
         link: '/',
-        description: 'SPA (Single Page Application) — это веб-приложение или веб-сайт, использующий единственный HTML-документ как оболочку для всех веб-страниц и организующий взаимодействие с пользователем через динамически подгружаемые HTML, CSS, JavaScript.',
         keywords: 'SPA, SEO, Single Page Application, spa index, spa prerender, react prerender, how to index spa',
         image: spa,
         darkImage: spaDark,

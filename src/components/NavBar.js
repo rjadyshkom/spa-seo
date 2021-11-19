@@ -1,17 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavItem} from './NavItem';
+import {TranslationContext} from '../contexts/TranslationContext';
 
-export function NavBar(props) {
+export function NavBar() {
 
-    const data = props.data;
+    const translation = useContext(TranslationContext);
     const exclude = ['notFound'];
 
-    const navigation = Object.keys(data)
+    const navigation = Object.keys(translation)
         .filter(key => !exclude.includes(key))
         .reduce((obj, key) => {
             return {
                 ...obj,
-                [key]: data[key]
+                [key]: translation[key]
             };
         }, {});
 

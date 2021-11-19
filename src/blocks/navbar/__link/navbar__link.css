@@ -7,3 +7,7 @@
     margin-right: 20px;
     transition: font-size .2s ease-in-out;
 }
+
+.navbar__link:last-of-type{
+    margin-right: 40px;
+}

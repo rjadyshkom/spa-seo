@@ -6,7 +6,7 @@ export function ThemeSwitcher(props) {
     return (
         <div className="switcher">
             {
-                props.darkTheme === 'dark'
+                props.theme === 'dark'
                     ?
                     <img
                         src={toggleLight}

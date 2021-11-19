@@ -3,13 +3,16 @@ import {Route, Switch, useLocation} from 'react-router-dom';
 import {Header} from './Header';
 import {Article} from './Article';
 import {Links} from './Links';
+import {TranslationContext, translations} from '../contexts/TranslationContext';
 import {content} from '../data/content';
-import {repos, authors} from '../utils/constants';
+import {reposRu, reposEn, authorsRu, authorsEn} from '../utils/constants';
+import {routes} from '../data/routes';
 import useVH from 'react-vh';
 
 function App() {
     const location = useLocation();
     const [currentLocation, setCurrentLocation] = useState(location);
+    const [language, setLanguage] = useState('ru');
     const [theme, setTheme] = useState('light');
     const [fade, setFade] = useState('fade_direction_in');
     const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
@@ -23,6 +26,15 @@ function App() {
         else
             document.body.classList.remove('root_dark')
     }
+
+    function handleLanguageChange(language) {
+        setLanguage(language)
+        if (language !== 'ru')
+            setLanguage('ru')
+        else
+            setLanguage('en')
+    }
+
 
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
@@ -42,10 +54,12 @@ function App() {
     }, []);
 
     return (
-        <>
+        <TranslationContext.Provider value={translations[language]}>
             <Header
-                darkTheme={theme}
                 onThemeChange={handleThemeChange}
+                onLanguageSelect={handleLanguageChange}
+                theme={theme}
+                language={language}
             />
             <div
                 className={`fade ${fade}`}
@@ -57,10 +71,10 @@ function App() {
                 }}
             >
                 <Switch location={currentLocation}>
-                    <Route exact path={spa.link}>
+                    <Route exact path={routes.spa}>
                         <Article
-                            title={spa.title}
-                            subtitle={spa.description}
+                            title={translations[language].spa.title}
+                            subtitle={translations[language].spa.description}
                             keywords={spa.keywords}
                             emoji={theme === 'light' ? spa.darkImage : spa.image}
                             favicon={theme === 'light' ? spa.darkImage : spa.image}
@@ -69,10 +83,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={problem.link}>
+                    <Route exact path={routes.problem}>
                         <Article
-                            title={problem.title}
-                            subtitle={problem.description}
+                            title={translations[language].problem.title}
+                            subtitle={translations[language].problem.description}
                             keywords={problem.keywords}
                             emoji={theme === 'light' ? problem.darkImage : problem.image}
                             favicon={theme === 'light' ? problem.darkImage : problem.image}
@@ -81,10 +95,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={task.link}>
+                    <Route exact path={routes.task}>
                         <Article
-                            title={task.title}
-                            subtitle={task.description}
+                            title={translations[language].task.title}
+                            subtitle={translations[language].task.description}
                             keywords={task.keywords}
                             emoji={theme === 'light' ? task.darkImage : task.image}
                             favicon={theme === 'light' ? task.darkImage : task.image}
@@ -93,10 +107,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={solution.link}>
+                    <Route exact path={routes.solution}>
                         <Article
-                            title={solution.title}
-                            subtitle={solution.description}
+                            title={translations[language].solution.title}
+                            subtitle={translations[language].solution.description}
                             keywords={solution.keywords}
                             emoji={theme === 'light' ? solution.darkImage : solution.image}
                             favicon={theme === 'light' ? solution.darkImage : solution.image}
@@ -106,9 +120,9 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={technologies.link}>
-                        <Links title={technologies.title}
-                               data={repos}
+                    <Route exact path={routes.technologies}>
+                        <Links title={translations[language].technologies.title}
+                               data={language === 'ru' ? reposRu : reposEn}
                                subtitle={technologies.description}
                                keywords={technologies.keywords}
                                emoji={theme === 'light' ? technologies.darkImage : technologies.image}
@@ -118,10 +132,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={result.link}>
+                    <Route exact path={routes.result}>
                         <Article
-                            title={result.title}
-                            subtitle={result.description}
+                            title={translations[language].result.title}
+                            subtitle={translations[language].result.description}
                             keywords={result.keywords}
                             emoji={theme === 'light' ? result.darkImage : result.image}
                             favicon={theme === 'light' ? result.darkImage : result.image}
@@ -130,10 +144,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={why.link}>
+                    <Route exact path={routes.why}>
                         <Article
-                            title={why.title}
-                            subtitle={why.description}
+                            title={translations[language].why.title}
+                            subtitle={translations[language].why.description}
                             keywords={why.keywords}
                             emoji={theme === 'light' ? why.darkImage : why.image}
                             favicon={theme === 'light' ? why.darkImage : why.image}
@@ -142,10 +156,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={who.link}>
+                    <Route exact path={routes.who}>
                         <Links
-                            title={who.title}
-                            data={authors}
+                            title={translations[language].who.title}
+                            data={language === 'ru' ? authorsRu : authorsEn}
                             subtitle={who.description}
                             keywords={who.keywords}
                             emoji={theme === 'light' ? who.darkImage : who.image}
@@ -155,10 +169,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route path={notFound.link}>
+                    <Route>
                         <Article
-                            title={notFound.title}
-                            subtitle={notFound.description}
+                            title={translations[language].notFound.title}
+                            subtitle={translations[language].notFound.description}
                             keywords={notFound.keywords}
                             emoji={theme === 'light' ? notFound.darkImage : notFound.image}
                             favicon={theme === 'light' ? notFound.darkImage : notFound.image}
@@ -167,7 +181,7 @@ function App() {
                     </Route>
                 </Switch>
             </div>
-        </>
+        </TranslationContext.Provider>
     );
 }
 
