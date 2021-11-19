@@ -16,7 +16,7 @@ export const translations = {
         task: {
             link: routes.task,
             title: 'Задача',
-            description: 'С минимальными изменениями в существующем проекте сделать так, чтобы поисковый робот индексировал все страницы SPA-приложения, а также установить для каждой страницы уникальные meta-теги (title, description, keywords ...etc).'
+            description: 'С минимальными изменениями в существующем проекте сделать так, чтобы поисковый робот индексировал все страницы SPA-приложения, а также установить для каждой страницы уникальные meta-теги (title, description, keywords ... и т.д.).'
         },
         solution: {
             link: routes.solution,
@@ -62,7 +62,7 @@ export const translations = {
         task: {
             link: routes.task,
             title: 'Task',
-            description: 'With minimal changes in the existing project to make a search robot index all pages of the SPA-application, as well as set for each page unique meta tags (title, description, keywords ...etc).'
+            description: 'With minimal changes in the existing project to make a search robot index all pages of the SPA-application, as well as set for each page unique meta tags (title, description, keywords … etc).'
         },
         solution: {
             link: routes.solution,
