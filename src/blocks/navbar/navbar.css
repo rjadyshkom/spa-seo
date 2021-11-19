@@ -8,5 +8,6 @@
 @media screen and (max-device-width: 768px) {
     .navbar {
         justify-content: flex-start;
+        margin-right: 10px;
     }
 }
