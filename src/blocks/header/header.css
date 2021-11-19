@@ -9,3 +9,10 @@
     padding: 20px 0;
     transition: border-bottom-color .3s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+    .header{
+        display: grid;
+        align-items: center;
+    }
+}

@@ -4,12 +4,18 @@
     margin-right: 20px;
 }
 
-.switcher:last-of-type{
-    margin-right: 0;
-}
+
 
 @media screen and (max-width: 768px) {
     .switcher {
-        margin-right: 10px;
+        grid-column: 3;
+        margin-right: 0;
+        align-self: end;
+    }
+
+    .switcher:last-of-type{
+        margin-right: 0;
+        grid-row: 1;
+        align-self: start;
     }
 }
