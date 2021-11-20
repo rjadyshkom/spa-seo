@@ -47,3 +47,9 @@ export const ogResultDark = process.env.PUBLIC_URL + '/og-result-dark.jpg';
 export const ogWhyDark = process.env.PUBLIC_URL + '/og-why-dark.jpg';
 export const ogWhoDark = process.env.PUBLIC_URL + '/og-who-dark.jpg';
 export const ogNotFoundDark = process.env.PUBLIC_URL + '/og-not-found-dark.jpg';
+
+export const languageIconRu = process.env.PUBLIC_URL + '/language-ru.png';
+export const languageIconEn = process.env.PUBLIC_URL + '/language-en.png';
+
+export const themeIconDark =  process.env.PUBLIC_URL + '/theme-icon-dark.png';
+export const themeIconLight =  process.env.PUBLIC_URL + '/theme-icon-light.png';

@@ -1,5 +1,4 @@
-import toggleDark from '../images/toggle-dark.png';
-import toggleLight from '../images/toggle-light.png';
+import {themeIconDark, themeIconLight} from '../utils/constants';
 
 export function ThemeSwitcher(props) {
 
@@ -9,20 +8,18 @@ export function ThemeSwitcher(props) {
                 props.theme === 'dark'
                     ?
                     <img
-                        src={toggleLight}
+                        src={themeIconLight}
                         alt="Светлая иконка"
                         className="switcher__image"
                         onClick={() => props.onThemeChange('light')}
                     />
-
                     :
                     <img
-                        src={toggleDark}
+                        src={themeIconDark}
                         alt="Тёмная иконка"
                         className="switcher__image"
                         onClick={() => props.onThemeChange('dark')}
                     />
-
             }
         </div>
     )

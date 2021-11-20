@@ -1,9 +1,7 @@
 import React from 'react';
-import languageIconRu from '../images/language-ru.png'
-import languageIconEn from '../images/language-en.png'
+import {languageIconRu, languageIconEn} from '../utils/constants';
 
 function LanguageSelector(props) {
-
 
     return (
         <div className="switcher">
@@ -16,7 +14,6 @@ function LanguageSelector(props) {
                         className="switcher__image"
                         onClick={() => props.onLanguageSelect('ru')}
                     />
-
                     :
                     <img
                         src={languageIconRu}
@@ -24,7 +21,6 @@ function LanguageSelector(props) {
                         className="switcher__image"
                         onClick={() => props.onLanguageSelect('en')}
                     />
-
             }
         </div>
     );
