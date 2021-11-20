@@ -1,19 +1,20 @@
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-import {siteName, systemLanguage} from '../utils/constants';
+import {siteName} from '../utils/constants';
 
 export function Seo({
-                 title,
-                 description,
-                 keywords,
-                 favicon,
-                 ogImage,
-                 canonical,
-                 meta = [],
-                 link = []
-             }) {
+                        title,
+                        description,
+                        keywords,
+                        favicon,
+                        ogImage,
+                        canonical,
+                        language,
+                        meta = [],
+                        link = []
+                    }) {
     return (
-        <Helmet htmlAttributes={{lang: `${systemLanguage()}`, prefix: 'og: //ogp.me/ns#'}}
+        <Helmet htmlAttributes={{lang: `${language}`, prefix: 'og: //ogp.me/ns#'}}
                 title={title}
                 meta={[
                     {

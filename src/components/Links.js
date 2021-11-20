@@ -15,6 +15,7 @@ export function Links(props) {
                 favicon={props.favicon}
                 ogImage={props.ogImage}
                 canonical={`${baseUrl}${props.canonical}`}
+                language={props.language}
             />
 
             <article className="content">

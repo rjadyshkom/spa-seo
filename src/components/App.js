@@ -80,6 +80,7 @@ function App() {
                 <Switch location={currentLocation}>
                     <Route exact path={routes.spa}>
                         <Article
+                            language={language}
                             title={translations[language].spa.title}
                             subtitle={translations[language].spa.description}
                             keywords={spa.keywords}
@@ -92,6 +93,7 @@ function App() {
 
                     <Route exact path={routes.problem}>
                         <Article
+                            language={language}
                             title={translations[language].problem.title}
                             subtitle={translations[language].problem.description}
                             keywords={problem.keywords}
@@ -104,6 +106,7 @@ function App() {
 
                     <Route exact path={routes.task}>
                         <Article
+                            language={language}
                             title={translations[language].task.title}
                             subtitle={translations[language].task.description}
                             keywords={task.keywords}
@@ -116,6 +119,7 @@ function App() {
 
                     <Route exact path={routes.solution}>
                         <Article
+                            language={language}
                             title={translations[language].solution.title}
                             subtitle={translations[language].solution.description}
                             keywords={solution.keywords}
@@ -128,19 +132,22 @@ function App() {
                     </Route>
 
                     <Route exact path={routes.technologies}>
-                        <Links title={translations[language].technologies.title}
-                               data={language === 'ru' ? reposRu : reposEn}
-                               subtitle={technologies.description}
-                               keywords={technologies.keywords}
-                               emoji={theme === 'light' ? technologies.darkImage : technologies.image}
-                               favicon={theme === 'light' ? technologies.darkImage : technologies.image}
-                               ogImage={theme === 'light' ? technologies.ogImage : technologies.darkOgImage}
-                               canonical={technologies.link}
+                        <Links
+                            language={language}
+                            title={translations[language].technologies.title}
+                            data={language === 'ru' ? reposRu : reposEn}
+                            subtitle={technologies.description}
+                            keywords={technologies.keywords}
+                            emoji={theme === 'light' ? technologies.darkImage : technologies.image}
+                            favicon={theme === 'light' ? technologies.darkImage : technologies.image}
+                            ogImage={theme === 'light' ? technologies.ogImage : technologies.darkOgImage}
+                            canonical={technologies.link}
                         />
                     </Route>
 
                     <Route exact path={routes.result}>
                         <Article
+                            language={language}
                             title={translations[language].result.title}
                             subtitle={translations[language].result.description}
                             keywords={result.keywords}
@@ -153,6 +160,7 @@ function App() {
 
                     <Route exact path={routes.why}>
                         <Article
+                            language={language}
                             title={translations[language].why.title}
                             subtitle={translations[language].why.description}
                             keywords={why.keywords}
@@ -165,6 +173,7 @@ function App() {
 
                     <Route exact path={routes.who}>
                         <Links
+                            language={language}
                             title={translations[language].who.title}
                             data={language === 'ru' ? authorsRu : authorsEn}
                             subtitle={who.description}
@@ -178,6 +187,7 @@ function App() {
 
                     <Route>
                         <Article
+                            language={language}
                             title={translations[language].notFound.title}
                             subtitle={translations[language].notFound.description}
                             keywords={notFound.keywords}
