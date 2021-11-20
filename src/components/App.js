@@ -129,7 +129,7 @@ function App() {
 
                     <Route exact path={routes.technologies}>
                         <Links title={translations[language].technologies.title}
-                               data={systemLanguage === 'ru' ? reposRu : reposEn}
+                               data={language === 'ru' ? reposRu : reposEn}
                                subtitle={technologies.description}
                                keywords={technologies.keywords}
                                emoji={theme === 'light' ? technologies.darkImage : technologies.image}
@@ -166,7 +166,7 @@ function App() {
                     <Route exact path={routes.who}>
                         <Links
                             title={translations[language].who.title}
-                            data={systemLanguage === 'ru' ? authorsRu : authorsEn}
+                            data={language === 'ru' ? authorsRu : authorsEn}
                             subtitle={who.description}
                             keywords={who.keywords}
                             emoji={theme === 'light' ? who.darkImage : who.image}
