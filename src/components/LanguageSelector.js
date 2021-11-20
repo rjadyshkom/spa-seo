@@ -1,6 +1,5 @@
 import React from 'react';
-import toggleRu from '../images/language-ru.png';
-import toggleEn from '../images/language-en.png';
+import {toggleRu, toggleEn} from '../utils/constants';
 
 function LanguageSelector(props) {
 
@@ -12,7 +11,7 @@ function LanguageSelector(props) {
                     ?
                     <img
                         src={toggleEn}
-                        alt="Светлая иконка"
+                        alt="Переключатель на английский"
                         className="switcher__image"
                         onClick={() => props.onLanguageSelect('ru')}
                     />
@@ -20,7 +19,7 @@ function LanguageSelector(props) {
                     :
                     <img
                         src={toggleRu}
-                        alt="Тёмная иконка"
+                        alt="Переключатель на русский"
                         className="switcher__image"
                         onClick={() => props.onLanguageSelect('en')}
                     />

@@ -1,6 +1,12 @@
 export const baseUrl = 'https://spa.ohuel.ru';
 export const siteName = 'Простой способ индексации SPA.';
 
+export const systemLanguage = () => {
+    const currentUserLanguage = navigator.language.slice(0, 2).toString();
+    if (currentUserLanguage === 'ru') return currentUserLanguage
+    else return ('en')
+};
+
 export const reposRu = {
     prerender: {
         link: 'https://github.com/stereobooster/react-snap',
@@ -118,3 +124,6 @@ export const ogResultDark = process.env.PUBLIC_URL + '/og-result-dark.jpg';
 export const ogWhyDark = process.env.PUBLIC_URL + '/og-why-dark.jpg';
 export const ogWhoDark = process.env.PUBLIC_URL + '/og-who-dark.jpg';
 export const ogNotFoundDark = process.env.PUBLIC_URL + '/og-not-found-dark.jpg';
+
+export const toggleRu = process.env.PUBLIC_URL + '/language-ru.png';
+export const toggleEn = process.env.PUBLIC_URL + '/language-en.png';

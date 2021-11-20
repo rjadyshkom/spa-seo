@@ -1,6 +1,6 @@
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-import {siteName} from '../utils/constants';
+import {siteName, systemLanguage} from '../utils/constants';
 
 export function Seo({
                  title,
@@ -13,7 +13,7 @@ export function Seo({
                  link = []
              }) {
     return (
-        <Helmet htmlAttributes={{lang: 'ru', prefix: 'og: //ogp.me/ns#'}}
+        <Helmet htmlAttributes={{lang: `${systemLanguage()}`, prefix: 'og: //ogp.me/ns#'}}
                 title={title}
                 meta={[
                     {

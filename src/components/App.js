@@ -5,9 +5,10 @@ import {Article} from './Article';
 import {Links} from './Links';
 import {TranslationContext, translations} from '../contexts/TranslationContext';
 import {content} from '../data/content';
-import {reposRu, reposEn, authorsRu, authorsEn} from '../utils/constants';
+import {reposRu, reposEn, authorsRu, authorsEn, systemLanguage} from '../utils/constants';
 import {routes} from '../data/routes';
 import useVH from 'react-vh';
+
 
 function App() {
     const location = useLocation();
@@ -31,14 +32,20 @@ function App() {
         setLanguage(language)
         if (language !== 'ru')
             setLanguage('ru')
-        else
-            setLanguage('en')
+        else setLanguage('en')
     }
 
 
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
     }, [location, currentLocation]);
+
+    useEffect(() => {
+        window.addEventListener('languagechange', () => {
+            if (language !== systemLanguage) setLanguage(systemLanguage);
+        })
+
+    }, [language, setLanguage]);
 
     useEffect(() => {
         window.matchMedia('(prefers-color-scheme: dark)')
@@ -122,7 +129,7 @@ function App() {
 
                     <Route exact path={routes.technologies}>
                         <Links title={translations[language].technologies.title}
-                               data={language === 'ru' ? reposRu : reposEn}
+                               data={systemLanguage === 'ru' ? reposRu : reposEn}
                                subtitle={technologies.description}
                                keywords={technologies.keywords}
                                emoji={theme === 'light' ? technologies.darkImage : technologies.image}
@@ -159,7 +166,7 @@ function App() {
                     <Route exact path={routes.who}>
                         <Links
                             title={translations[language].who.title}
-                            data={language === 'ru' ? authorsRu : authorsEn}
+                            data={systemLanguage === 'ru' ? authorsRu : authorsEn}
                             subtitle={who.description}
                             keywords={who.keywords}
                             emoji={theme === 'light' ? who.darkImage : who.image}
