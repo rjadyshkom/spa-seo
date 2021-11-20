@@ -16,6 +16,7 @@ export function Links(props) {
                 ogImage={props.ogImage}
                 canonical={`${baseUrl}${props.canonical}`}
                 language={props.language}
+                siteName={props.siteName}
             />
 
             <article className="content">

@@ -4,7 +4,7 @@ import {Header} from './Header';
 import {Article} from './Article';
 import {Links} from './Links';
 import {TranslationContext, translations} from '../contexts/TranslationContext';
-import {content} from '../data/content';
+import {images} from '../data/images';
 import {systemLanguage} from '../utils/constants';
 import {routes} from '../data/routes';
 import useVH from 'react-vh';
@@ -15,7 +15,7 @@ function App() {
     const [language, setLanguage] = useState('ru');
     const [theme, setTheme] = useState('light');
     const [fade, setFade] = useState('fade_direction_in');
-    const {spa, problem, task, solution, technologies, result, why, who, notFound} = content;
+    const {spa, problem, task, solution, technologies, result, why, who, notFound} = images;
 
     useVH();
 
@@ -83,11 +83,12 @@ function App() {
                             language={language}
                             title={translations[language].spa.title}
                             subtitle={translations[language].spa.description}
-                            keywords={spa.keywords}
+                            keywords={translations[language].spa.keywords}
                             emoji={theme === 'light' ? spa.darkImage : spa.image}
                             favicon={theme === 'light' ? spa.darkImage : spa.image}
                             ogImage={theme === 'light' ? spa.ogImage : spa.darkOgImage}
-                            canonical={spa.link}
+                            canonical={routes.spa}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -96,11 +97,12 @@ function App() {
                             language={language}
                             title={translations[language].problem.title}
                             subtitle={translations[language].problem.description}
-                            keywords={problem.keywords}
+                            keywords={translations[language].problem.keywords}
                             emoji={theme === 'light' ? problem.darkImage : problem.image}
                             favicon={theme === 'light' ? problem.darkImage : problem.image}
                             ogImage={theme === 'light' ? problem.ogImage : problem.darkOgImage}
-                            canonical={problem.link}
+                            canonical={routes.problem}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -109,11 +111,12 @@ function App() {
                             language={language}
                             title={translations[language].task.title}
                             subtitle={translations[language].task.description}
-                            keywords={task.keywords}
+                            keywords={translations[language].task.keywords}
                             emoji={theme === 'light' ? task.darkImage : task.image}
                             favicon={theme === 'light' ? task.darkImage : task.image}
                             ogImage={theme === 'light' ? task.ogImage : task.darkOgImage}
-                            canonical={task.link}
+                            canonical={routes.task}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -122,12 +125,12 @@ function App() {
                             language={language}
                             title={translations[language].solution.title}
                             subtitle={translations[language].solution.description}
-                            keywords={solution.keywords}
+                            keywords={translations[language].solution.keywords}
                             emoji={theme === 'light' ? solution.darkImage : solution.image}
                             favicon={theme === 'light' ? solution.darkImage : solution.image}
                             ogImage={theme === 'light' ? solution.ogImage : solution.darkOgImage}
-                            canonical={solution.link}
-
+                            canonical={routes.solution}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -136,12 +139,13 @@ function App() {
                             language={language}
                             title={translations[language].technologies.title}
                             data={translations[language].repos}
-                            subtitle={technologies.description}
-                            keywords={technologies.keywords}
+                            subtitle={translations[language].technologies.description}
+                            keywords={translations[language].technologies.keywords}
                             emoji={theme === 'light' ? technologies.darkImage : technologies.image}
                             favicon={theme === 'light' ? technologies.darkImage : technologies.image}
                             ogImage={theme === 'light' ? technologies.ogImage : technologies.darkOgImage}
-                            canonical={technologies.link}
+                            canonical={routes.technologies}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -150,11 +154,12 @@ function App() {
                             language={language}
                             title={translations[language].result.title}
                             subtitle={translations[language].result.description}
-                            keywords={result.keywords}
+                            keywords={translations[language].result.keywords}
                             emoji={theme === 'light' ? result.darkImage : result.image}
                             favicon={theme === 'light' ? result.darkImage : result.image}
                             ogImage={theme === 'light' ? result.ogImage : result.darkOgImage}
-                            canonical={result.link}
+                            canonical={routes.result}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -163,11 +168,12 @@ function App() {
                             language={language}
                             title={translations[language].why.title}
                             subtitle={translations[language].why.description}
-                            keywords={why.keywords}
+                            keywords={translations[language].why.keywords}
                             emoji={theme === 'light' ? why.darkImage : why.image}
                             favicon={theme === 'light' ? why.darkImage : why.image}
                             ogImage={theme === 'light' ? why.ogImage : why.darkOgImage}
-                            canonical={why.link}
+                            canonical={routes.why}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -176,12 +182,13 @@ function App() {
                             language={language}
                             title={translations[language].who.title}
                             data={translations[language].authors}
-                            subtitle={who.description}
-                            keywords={who.keywords}
+                            subtitle={translations[language].who.description}
+                            keywords={translations[language].who.keywords}
                             emoji={theme === 'light' ? who.darkImage : who.image}
                             favicon={theme === 'light' ? who.darkImage : who.image}
                             ogImage={theme === 'light' ? who.ogImage : who.darkOgImage}
-                            canonical={who.link}
+                            canonical={routes.who}
+                            siteName={translations[language].siteName}
                         />
                     </Route>
 
@@ -190,7 +197,6 @@ function App() {
                             language={language}
                             title={translations[language].notFound.title}
                             subtitle={translations[language].notFound.description}
-                            keywords={notFound.keywords}
                             emoji={theme === 'light' ? notFound.darkImage : notFound.image}
                             favicon={theme === 'light' ? notFound.darkImage : notFound.image}
                             ogImage={theme === 'light' ? notFound.ogImage : notFound.darkOgImage}

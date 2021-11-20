@@ -1,6 +1,5 @@
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-import {siteName} from '../utils/constants';
 
 export function Seo({
                         title,
@@ -10,6 +9,7 @@ export function Seo({
                         ogImage,
                         canonical,
                         language,
+                        siteName,
                         meta = [],
                         link = []
                     }) {
