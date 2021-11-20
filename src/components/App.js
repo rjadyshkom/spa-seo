@@ -9,7 +9,6 @@ import {reposRu, reposEn, authorsRu, authorsEn, systemLanguage} from '../utils/c
 import {routes} from '../data/routes';
 import useVH from 'react-vh';
 
-
 function App() {
     const location = useLocation();
     const [currentLocation, setCurrentLocation] = useState(location);
@@ -35,17 +34,20 @@ function App() {
         else setLanguage('en')
     }
 
-
     useEffect(() => {
         if (location !== currentLocation) setFade('fade_direction_out');
     }, [location, currentLocation]);
 
     useEffect(() => {
-        window.addEventListener('languagechange', () => {
-            if (language !== systemLanguage) setLanguage(systemLanguage);
-        })
-
-    }, [language, setLanguage]);
+        if (language !== systemLanguage) {
+            window.addEventListener('languagechange', () => {
+                    setLanguage(systemLanguage)
+                }
+            )
+            return () => window.removeEventListener('languagechange', () => {
+            })
+        }
+    }, [language]);
 
     useEffect(() => {
         window.matchMedia('(prefers-color-scheme: dark)')
@@ -54,10 +56,8 @@ function App() {
         handleThemeChange(window.matchMedia('(prefers-color-scheme: dark)')
             .matches ? 'dark' : 'light')
 
-        return () => {
-            window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
-            });
-        }
+        return () => window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
+        });
     }, []);
 
     return (
