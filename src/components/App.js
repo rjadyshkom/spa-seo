@@ -5,7 +5,7 @@ import {Article} from './Article';
 import {Links} from './Links';
 import {TranslationContext, translations} from '../contexts/TranslationContext';
 import {content} from '../data/content';
-import {reposRu, reposEn, authorsRu, authorsEn, systemLanguage} from '../utils/constants';
+import {systemLanguage} from '../utils/constants';
 import {routes} from '../data/routes';
 import useVH from 'react-vh';
 
@@ -135,7 +135,7 @@ function App() {
                         <Links
                             language={language}
                             title={translations[language].technologies.title}
-                            data={language === 'ru' ? reposRu : reposEn}
+                            data={translations[language].repos}
                             subtitle={technologies.description}
                             keywords={technologies.keywords}
                             emoji={theme === 'light' ? technologies.darkImage : technologies.image}
@@ -175,7 +175,7 @@ function App() {
                         <Links
                             language={language}
                             title={translations[language].who.title}
-                            data={language === 'ru' ? authorsRu : authorsEn}
+                            data={translations[language].authors}
                             subtitle={who.description}
                             keywords={who.keywords}
                             emoji={theme === 'light' ? who.darkImage : who.image}

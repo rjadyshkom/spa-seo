@@ -14,7 +14,7 @@ export function Seo({
                         link = []
                     }) {
     return (
-        <Helmet htmlAttributes={{lang: `${language}`, prefix: 'og: //ogp.me/ns#'}}
+        <Helmet htmlAttributes={{lang: language, prefix: 'og: //ogp.me/ns#'}}
                 title={title}
                 meta={[
                     {

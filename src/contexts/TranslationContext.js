@@ -46,6 +46,39 @@ export const translations = {
         notFound: {
             title: '404',
             description: 'Страница не найдена'
+        },
+        repos: {
+            prerender: {
+                link: 'https://github.com/stereobooster/react-snap',
+                name: 'React-Snap',
+                description: 'Для пререндеринга'
+
+            },
+            meta: {
+                link: 'https://github.com/nfl/react-helmet',
+                name: 'React-Helmet',
+                description: 'Для meta-тегов'
+
+            }
+        },
+        authors: {
+            sergei: {
+                link: 'https://t.me/jessychrist',
+                name: 'Сергей',
+                description: 'Сделал сайт'
+
+            },
+            anton: {
+                link: 'https://habr.com/ru/company/rshb/blog/529636',
+                name: 'Антон',
+                description: 'Написал статью'
+
+            },
+            github: {
+                link: 'https://github.com/rjadyshkom/spa-seo',
+                name: 'GitHub',
+                description: 'Сохранил исходник'
+            }
         }
     },
     en: {
@@ -92,6 +125,40 @@ export const translations = {
         notFound: {
             title: '404',
             description: 'Page not found'
+        },
+        repos: {
+            prerender: {
+                link: 'https://github.com/stereobooster/react-snap',
+                name: 'React-Snap',
+                description: 'For pre-rendering'
+
+            },
+            meta: {
+                link: 'https://github.com/nfl/react-helmet',
+                name: 'React-Helmet',
+                description: 'For meta-tags'
+
+            }
+        },
+        authors: {
+            sergei: {
+                link: 'https://t.me/jessychrist',
+                name: 'Sergei',
+                description: 'Made a website'
+
+            },
+            anton: {
+                link: 'https://habr.com/ru/company/rshb/blog/529636',
+                name: 'Anton',
+                description: 'Wrote an article'
+
+            },
+            github: {
+                link: 'https://github.com/rjadyshkom/spa-seo',
+                name: 'GitHub',
+                description: 'Saved the source'
+
+            }
         }
     }
 }
