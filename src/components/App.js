@@ -3,6 +3,7 @@ import {Route, Switch, useLocation} from 'react-router-dom';
 import {Header} from './Header';
 import {Article} from './Article';
 import {Links} from './Links';
+import {Contacts} from './Contacts';
 import {TranslationContext, translations} from '../contexts/TranslationContext';
 import {images} from '../data/images';
 import {systemLanguage} from '../utils/constants';
@@ -190,6 +191,10 @@ function App() {
                             canonical={routes.who}
                             siteName={translations[language].siteName}
                         />
+                    </Route>
+
+                    <Route exact path={routes.contacts}>
+                        <Contacts/>
                     </Route>
 
                     <Route>

@@ -6,5 +6,6 @@ export const routes = {
     technologies: '/technologies',
     result: '/result',
     why: '/why',
-    who: '/who'
+    who: '/who',
+    contacts: '/contacts'
 }

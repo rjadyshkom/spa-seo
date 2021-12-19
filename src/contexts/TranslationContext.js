@@ -51,6 +51,10 @@ export const translations = {
             keywords: 'Сергей Митрофанов, выпускник курса веб разработки яндекс, Антон Россельхоз банк full-stack разработчик, репозиторий GitHub',
             description: 'Сергей Митрофанов сделал сайт, Антон Россельхоз банк написал статью, GitHub сохранил исходник.'
         },
+        contacts: {
+            link: routes.contacts,
+            title: 'Контакты'
+        },
         notFound: {
             title: '404',
             description: 'Страница не найдена'
@@ -138,6 +142,10 @@ export const translations = {
             title: 'Who',
             keywords: 'Sergei Mitrofanov, Yandex Practicum alumni dev, Anton Rosselhoz bank full-stack developer, git hub repo',
             description: 'Sergei Mitrofanov made the site, Anton Rosselkhoz Bank wrote the article, GitHub saved the source.'
+        },
+        contacts: {
+            link: routes.contacts,
+            title: 'Contacts'
         },
         notFound: {
             title: '404',
