@@ -19,7 +19,6 @@ const jsonToFormData = (json) => {
 const FormWrapper = ({children, siteUrl, formId}) => {
     const [isSent, setSent] = useState(null)
     const [isLoading, setLoading] = useState(false)
-    const [hasError, setError] = useState(null)
 
     const apiUrl =
         `${siteUrl}/wp-json/contact-form-7/v1/contact-forms/${formId}/feedback/`
@@ -28,7 +27,6 @@ const FormWrapper = ({children, siteUrl, formId}) => {
         event.preventDefault()
 
         setLoading(true)
-        setError(null)
 
         fetch(apiUrl, {
             method: "POST",
@@ -41,7 +39,6 @@ const FormWrapper = ({children, siteUrl, formId}) => {
             })
             .catch((error) => {
                 console.log(`Ошибка: ${error}`)
-                setError(error)
             })
             .finally(() => {
                 setLoading(false)
@@ -51,8 +48,7 @@ const FormWrapper = ({children, siteUrl, formId}) => {
     const Form = cloneElement(children, {
         handler: formSubmitHandler,
         isLoading,
-        isSent,
-        hasError,
+        isSent
     })
 
     return <div>{(siteUrl && formId) ? Form : 'Проверить эндпоинт формы'}</div>
