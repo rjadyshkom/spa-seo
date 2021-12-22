@@ -19,7 +19,7 @@ const validationSchema = object({
         .required('Напишите хоть что-нибудь')
 });
 
-const convertToFormData = (json) => {
+const dataFromForm = (json) => {
     try {
         const data = new FormData()
 
@@ -46,7 +46,7 @@ const Form = () => {
                 }}
                 validationSchema={validationSchema}
                 onSubmit={(values, {setSubmitting}) => {
-                    const submitData = async () => {
+                    const onFormSubmit = async () => {
 
                         try {
                             const result = await axios({
@@ -55,15 +55,16 @@ const Form = () => {
                                     'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
                                 },
                                 method: 'POST',
-                                data: convertToFormData(values)
-                            });
+                                data: dataFromForm(values)
+                            })
                             setState(result.data.message);
                             setSubmitting(false);
                         } catch (error) {
                             setState('Отправка не удалась');
                         }
                     };
-                    submitData();
+
+                    void onFormSubmit();
                 }}
             >
                 {({
