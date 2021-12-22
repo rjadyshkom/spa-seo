@@ -1,12 +1,9 @@
-import FormWrapper from "../helpers/FormWrapper";
-import ContactForm from "./ContactForm";
+import Form from "../helpers/Form";
 
 export function Contacts() {
     return (
         <div className="content">
-            <FormWrapper siteUrl="https://rjadysh.com/" formId="4009">
-                <ContactForm/>
-            </FormWrapper>
+            <Form/>
         </div>
     )
 }
