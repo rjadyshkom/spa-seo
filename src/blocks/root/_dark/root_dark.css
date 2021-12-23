@@ -1,8 +1,15 @@
 .root_dark {
-    --background-color: #444950;
-    --text-color: #f5f6f7;
+    --background-color: #1a1e23;
+    --text-color: #e2e5e9;
+    --title-color: #8a96a8;
     --link-color: #9cbbff;
     --link-color-active: #437dff;
-    --border-color: #f5f6f7;
-    --subnav-item-background: #383d44;
+    --border-color: #2b313b;
+    --border-color-focus: #1760cf;
+    --subnav-item-background: #21252c;
+    --subnav-item-background-hover: #2b313b;
+    --error-color: #e15664;
+    --placeholder-color: #8a96a8;
+    --subnav-item-box-shadow: rgba(0 0 0  / 40%) 0 4px 8px, rgb(0 0 0 / 8%) 0 -2px 4px;
+    --subnav-item-box-shadow-hover: rgb(0 0 0 / 40%) 0 8px 16px, rgb(0 0 0 / 8%) 0 -2px 8px;
 }

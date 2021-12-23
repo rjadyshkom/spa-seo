@@ -1,10 +1,16 @@
 :root {
-    --background-color: #f0f1f3;
+    --background-color: #ffffff;
     --text-color: #000;
-    --link-color: #9cbbff;
-    --link-color-active: #437dff;
-    --border-color: #000;
-    --subnav-item-background: #e8e8e8;
+    --title-color: #626f84;
+    --link-color: #4789eb;
+    --link-color-active: #1a6be5;
+    --border-color: #e2e5e9;
+    --border-color-focus: #0949aa;
+    --subnav-item-background: #ffffff;
+    --error-color: #da0b20;
+    --placeholder-color: #626f84;
+    --subnav-item-box-shadow: rgba(0 0 0  / 20%) 0 2px 4px, rgb(0 0 0 / 4%) 0 -1px 2px;
+    --subnav-item-box-shadow-hover: rgb(0 0 0 / 20%) 0 4px 8px, rgb(0 0 0 / 4%) 0 -1px 4px;
 }
 
 .root {

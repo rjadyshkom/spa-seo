@@ -1,15 +1,18 @@
 input {
-    border: 0;
-    border-bottom: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 15px;
     outline: none;
     width: 100%;
     background-color: transparent;
     margin: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    min-height: 62px;
 }
-input:focus {
-    border-bottom-color: var(--link-color-active);
+input:focus:not(.form__input_invalid) {
+    border-color: var(--border-color-focus);
 }
 
 input::placeholder {
@@ -18,12 +21,12 @@ input::placeholder {
     text-transform: lowercase;
 }
 input:focus::placeholder {
-    color: var(--text-color);
+    color: var(--placeholder-color);
 }
 
 input:not(:placeholder-shown) + label,
 input:focus + label {
-    top: -16px;
+    top: -21px;
     font-size: 14px;
     pointer-events: initial;
 }

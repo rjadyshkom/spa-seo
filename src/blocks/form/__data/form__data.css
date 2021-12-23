@@ -1,3 +1,8 @@
 .form__data {
     padding: 30px;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }

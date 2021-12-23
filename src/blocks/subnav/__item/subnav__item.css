@@ -2,12 +2,18 @@
     list-style-type: none;
     font-size: 32px;
     line-height: 37px;
-    padding: 20px 50px;
+    padding: 0;
     background-color: var(--subnav-item-background);
     border-radius: 20px;
     margin: 0 10px 10px 0;
     min-width: 240px;
-    transition: background-color .3s ease-in-out;
+    transition: background-color .15s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: var(--subnav-item-box-shadow);
+}
+
+.subnav__item:hover {
+    background-color: var(--subnav-item-background-hover);
+    box-shadow: var(--subnav-item-box-shadow-hover);
 }
 
 .subnav__item:last-of-type {

@@ -125,10 +125,11 @@ const Form = () => {
                                         name="formMessage"
                                         id="formMessage"
                                         placeholder="Чтобы понять, о чём пойдёт речь"
+                                        rows="1"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
                                         value={values.formMessage}
-                                        className={errors.formEmail && touched.formEmail ? "form__input_invalid" : "form__input_textarea"}
+                                        className={errors.formMessage && touched.formMessage ? "form__input_invalid" : "form__input_textarea"}
                                     />
                                 <label htmlFor="formMessage" className="form__label"> Сообщение: </label>
                                 <div className="form__wrapper">

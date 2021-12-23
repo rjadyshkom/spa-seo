@@ -1,7 +1,8 @@
 .form__input_invalid {
-    border-bottom-color: red;
+    border-color: var(--error-color);
 }
 
-.form__input_invalid:focus{
-    border-bottom-color: red;
+.form__input_invalid:focus + label {
+    border-color: var(--error-color);
+    color: var(--error-color);
 }

@@ -1,12 +1,9 @@
 .subnav__link {
-    color: #437DFF;
+    color: var(--link-color-active);
     text-decoration: none;
     font-size: 20px;
     transition: opacity .3s;
     display: flex;
     flex-direction: column;
-}
-
-.subnav__link:hover {
-    opacity: .6;
+    padding: 20px 50px;
 }
