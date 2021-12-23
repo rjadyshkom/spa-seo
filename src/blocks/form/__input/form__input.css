@@ -8,21 +8,22 @@ input {
     background-color: transparent;
     margin: 0;
 }
-input:focus:not(:invalid) {
+input:focus {
     border-bottom-color: var(--link-color-active);
 }
 
 input::placeholder {
     color: transparent;
     font-size: 12px;
+    text-transform: lowercase;
 }
 input:focus::placeholder {
-    color: initial;
+    color: var(--text-color);
 }
 
 input:not(:placeholder-shown) + label,
 input:focus + label {
-    top: -1rem;
-    font-size: 0.8rem;
+    top: -16px;
+    font-size: 14px;
     pointer-events: initial;
 }

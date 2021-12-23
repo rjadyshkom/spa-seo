@@ -19,14 +19,15 @@ textarea::placeholder {
     color: transparent;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
+    text-transform: lowercase;
 }
 textarea:focus::placeholder {
-    color: initial;
+    color: var(--text-color);
 }
 
 textarea:not(:placeholder-shown) + label,
 textarea:focus + label {
-    top: -1rem;
-    font-size: 0.8rem;
+    top: -16px;
+    font-size: 14px;
     pointer-events: initial;
 }

@@ -5,4 +5,5 @@
     color: red;
     margin: 0;
     padding: 5px 0 0;
+    text-transform: lowercase;
 }
