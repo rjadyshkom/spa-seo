@@ -16,8 +16,22 @@
 @import url(./blocks/fade/fade.css);
 @import url(./blocks/fade/_direction/fade_direction_in.css);
 @import url(./blocks/fade/_direction/fade_direction_out.css);
+@import url(./blocks/fade/_direction/fade_direction_top.css);
 @import url(./blocks/switcher/switcher.css);
 @import url(./blocks/switcher/__image/switcher__image.css);
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/__wrapper/form__wrapper.css);
+@import url(./blocks/form/__button/form__button.css);
+@import url(./blocks/form/__button/_type/form__button_type_submit.css);
+@import url(./blocks/form/__button/_type/form__button_type_reset.css);
+@import url(./blocks/form/__data/form__data.css);
+@import url(./blocks/form/__error/form__error.css);
+@import url(./blocks/form/__field/form__field.css);
+@import url(./blocks/form/__handlers/form__handlers.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input/_textarea/form__input_textarea.css);
+@import url(blocks/form/__input/_invalid/form__input_invalid.css);
+@import url(./blocks/form/__label/form__label.css);
 
 
 

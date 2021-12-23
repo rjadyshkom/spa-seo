@@ -1,0 +1,28 @@
+input {
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+}
+input:focus:not(:invalid) {
+    border-bottom-color: var(--link-color-active);
+}
+
+input::placeholder {
+    color: transparent;
+    font-size: 12px;
+}
+input:focus::placeholder {
+    color: initial;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+    top: -1rem;
+    font-size: 0.8rem;
+    pointer-events: initial;
+}

@@ -12,10 +12,10 @@ const validationSchema = object({
         .required('Укажите имя'),
     formEmail: string()
         .min(2, 'Минимум 7 символов')
-        .matches(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Email должен содержать символ @, домен и доменную зону')
-        .required('Укажите почту'),
+        .matches(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Некорректный email')
+        .required('Укажите email'),
     formMessage: string()
-        .max(100, 'Ограничение в 100 символов. Сформулируешь покороче?')
+        .max(100, 'Ограничение в 100 символов. Краткость - сестра таланта.')
         .required('Напишите хоть что-нибудь')
 });
 
@@ -66,6 +66,7 @@ const Form = () => {
 
                     void onFormSubmit();
                 }}
+                validateOnChange
             >
                 {({
                       dirty,
@@ -76,50 +77,80 @@ const Form = () => {
                       handleChange,
                       handleBlur,
                       handleSubmit,
-                      isSubmitting
+                      isSubmitting,
+                      handleReset
                   }) => (
-                    <form onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="">
-                                Имя *
+                    <form onSubmit={handleSubmit} className="form" noValidate>
+                        <fieldset className="form__data">
+                            <div className="form__field">
                                 <input
+                                    className={errors.formName && touched.formName ? "form__input_invalid" : "form__input"}
                                     type="text"
                                     name="formName"
-                                    onChange={handleChange}
+                                    id="formName"
+                                    placeholder="Чтобы знать, как к Вам обращаться"
                                     onBlur={handleBlur}
+                                    onChange={handleChange}
                                     value={values.formName}
                                 />
-                                {errors.formName && touched.formName ? <div>{errors.formName}</div> : null}
-                            </label>
-                        </div>
-                        <div>
-                            <label htmlFor="">
-                                Email *
+                                <label htmlFor="formName" className="form__label"> Имя: </label>
+                                <div className="form__wrapper">
+                                    {errors.formName && touched.formName ?
+                                        <span
+                                            className="form__error fade fade_direction_top">{errors.formName}</span> : null}
+                                </div>
+                            </div>
+
+                            <div className="form__field">
                                 <input
+                                    className={errors.formEmail && touched.formEmail ? "form__input_invalid" : "form__input"}
                                     type="email"
                                     name="formEmail"
-                                    onChange={handleChange}
+                                    id="formEmail"
+                                    placeholder="Чтобы было, куда отвечать"
                                     onBlur={handleBlur}
+                                    onChange={handleChange}
                                     value={values.formEmail}
                                 />
-                                {errors.formEmail && touched.formEmail ? <div>{errors.formEmail}</div> : null}
-                            </label>
-                        </div>
-                        <div>
-                            <label htmlFor="">
-                                Сообщение *
-                                <textarea
-                                    name="formMessage"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.formMessage}
-                                />
-                                {errors.formMessage && touched.formMessage ? <div>{errors.formMessage}</div> : null}
-                            </label>
-                        </div>
-                        <button type="submit" disabled={!(dirty && isValid)}>
-                            {isSubmitting ? 'Отправка...' : 'Отправить'}
-                        </button>
+                                <label htmlFor="formEmail" className="form__label"> Электропочта: </label>
+                                <div className="form__wrapper">
+                                    {errors.formEmail && touched.formEmail ?
+                                        <span
+                                            className="form__error fade fade_direction_top">{errors.formEmail}</span> : null}
+                                </div>
+                            </div>
+
+                            <div className="form__field">
+                                    <textarea
+                                        name="formMessage"
+                                        id="formMessage"
+                                        placeholder="Чтобы понять, о чём пойдёт речь"
+                                        onBlur={handleBlur}
+                                        onChange={handleChange}
+                                        value={values.formMessage}
+                                        className={errors.formEmail && touched.formEmail ? "form__input_invalid" : "form__input_textarea"}
+                                    />
+                                <label htmlFor="formMessage" className="form__label"> Сообщение: </label>
+                                <div className="form__wrapper">
+                                    {errors.formMessage && touched.formMessage ?
+                                        <span
+                                            className="form__error fade fade_direction_top">{errors.formMessage}</span> : null}
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset className="form__handlers">
+                            <button
+                                type="button"
+                                className="outline"
+                                onClick={handleReset}
+                                disabled={!dirty || isSubmitting}
+                            >
+                                Очистить
+                            </button>
+                            <button type="submit" disabled={!(dirty && isValid)}>
+                                {isSubmitting ? 'Отправка...' : 'Отправить'}
+                            </button>
+                        </fieldset>
                     </form>
                 )}
             </Formik>
