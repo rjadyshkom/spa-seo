@@ -19,4 +19,7 @@
     --form-button-submit-disabled-bg-color: #414a58;
     --form-button-hover-color: #1a6be5;
     --form-button-reset-hover-bg-color: #252a32;
+    --form-info-bg-color: #252a32;
+    --form-info-border-color: #4789eb;
+    --form-info-text-color: #e2e5e9
 }

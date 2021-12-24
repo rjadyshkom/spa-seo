@@ -30,8 +30,13 @@
 @import url(./blocks/form/__handlers/form__handlers.css);
 @import url(./blocks/form/__input/form__input.css);
 @import url(./blocks/form/__input/_textarea/form__input_textarea.css);
-@import url(blocks/form/__input/_invalid/form__input_invalid.css);
+@import url(./blocks/form/__input/_invalid/form__input_invalid.css);
 @import url(./blocks/form/__label/form__label.css);
+@import url(./blocks/form/__info/form__info.css);
+@import url(./blocks/form/__message/form__message.css);
+@import url(./blocks/form/__container/form__container.css);
+@import url(./blocks/form/__icon/form__icon.css);
+@import url(./blocks/spinner/spinner.css);
 
 
 

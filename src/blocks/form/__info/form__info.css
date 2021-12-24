@@ -1,0 +1,12 @@
+.form__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    background-color: var(--form-info-bg-color);
+    border: 1px solid var(--form-info-border-color);
+    border-radius: 4px;
+    margin: 0;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+}

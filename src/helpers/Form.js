@@ -45,7 +45,7 @@ const Form = () => {
                     formMessage: ''
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(values, {setSubmitting}) => {
+                onSubmit={(values, {setSubmitting, resetForm}) => {
                     const onFormSubmit = async () => {
 
                         try {
@@ -58,7 +58,10 @@ const Form = () => {
                                 data: dataFromForm(values)
                             })
                             setState(result.data.message);
+                            console.log(result)
                             setSubmitting(false);
+                            resetForm();
+
                         } catch (error) {
                             setState('Отправка не удалась');
                         }
@@ -66,7 +69,6 @@ const Form = () => {
 
                     void onFormSubmit();
                 }}
-                validateOnChange
             >
                 {({
                       dirty,
@@ -148,15 +150,29 @@ const Form = () => {
                             >
                                 Очистить
                             </button>
-                            <button type="submit" disabled={!(dirty && isValid)} className="form__button form__button_type_submit">
-                                {isSubmitting ? 'Отправка...' : 'Отправить'}
+                            <button type="submit" disabled={!(dirty && isValid)}
+                                    className="form__button form__button_type_submit">
+                                {isSubmitting ? <svg className="spinner" viewBox="0 0 50 50">
+                                    <circle className="path" cx="25" cy="25" r="10" fill="none"
+                                            strokeWidth="3">&nbsp;</circle>
+                                </svg> : 'Отправить'}
                             </button>
                         </fieldset>
+
+                        {state
+                            ?
+                            <fieldset className="form__info fade fade_direction_top">
+                                <div className="form__container">
+                                    <p className="form__message">
+                                        {state}
+                                    </p>
+                                </div>
+                            </fieldset>
+                            : null}
+
                     </form>
                 )}
             </Formik>
-
-            {state ? <p>{state}</p> : null}
         </>
     );
 };
