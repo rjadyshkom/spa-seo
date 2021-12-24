@@ -1,0 +1,18 @@
+.form__button_type_reset {
+    background-color: transparent;
+    color: var(--form-button-color);
+    border: 2px solid var(--form-button-color);
+}
+
+.form__button_type_reset:hover {
+    background-color: var(--form-button-reset-hover-bg-color);
+    color: var(--form-button-hover-color);
+    border: 2px solid var(--form-button-hover-color);
+}
+
+
+.form__button_type_reset:disabled {
+    background-color: transparent;
+    color: var(--form-button-disabled-color);
+    border: 2px solid var(--form-button-disabled-color);
+}

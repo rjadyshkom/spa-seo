@@ -1,0 +1,20 @@
+.form__button {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: auto;
+    padding: 20px 32px;
+    border: none;
+    outline-offset: 2px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+}

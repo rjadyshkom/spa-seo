@@ -6,5 +6,5 @@
     pointer-events: none;
     color: var(--placeholder-color);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
 }

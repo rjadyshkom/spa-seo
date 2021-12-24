@@ -142,13 +142,13 @@ const Form = () => {
                         <fieldset className="form__handlers">
                             <button
                                 type="button"
-                                className="outline"
+                                className="form__button form__button_type_reset"
                                 onClick={handleReset}
                                 disabled={!dirty || isSubmitting}
                             >
                                 Очистить
                             </button>
-                            <button type="submit" disabled={!(dirty && isValid)}>
+                            <button type="submit" disabled={!(dirty && isValid)} className="form__button form__button_type_submit">
                                 {isSubmitting ? 'Отправка...' : 'Отправить'}
                             </button>
                         </fieldset>

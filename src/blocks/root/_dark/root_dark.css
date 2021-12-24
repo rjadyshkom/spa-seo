@@ -12,4 +12,11 @@
     --placeholder-color: #8a96a8;
     --subnav-item-box-shadow: rgba(0 0 0  / 40%) 0 4px 8px, rgb(0 0 0 / 8%) 0 -2px 4px;
     --subnav-item-box-shadow-hover: rgb(0 0 0 / 40%) 0 8px 16px, rgb(0 0 0 / 8%) 0 -2px 8px;
+    --form-button-color: #4789eb;
+    --form-button-submit-color: #fff;
+    --form-button-disabled-color: #414a58;
+    --form-button-submit-disabled-color: #1a1e23;
+    --form-button-submit-disabled-bg-color: #414a58;
+    --form-button-hover-color: #1a6be5;
+    --form-button-reset-hover-bg-color: #252a32;
 }

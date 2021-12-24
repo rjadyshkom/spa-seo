@@ -2,7 +2,7 @@
     display: block;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: normal;
     text-align: left;
     color: var(--error-color);
     margin: 0;

@@ -1,0 +1,13 @@
+.form__button_type_submit {
+    background-color: var(--form-button-color);
+    color: var(--form-button-submit-color);
+}
+
+.form__button_type_submit:hover {
+    background-color: var(--form-button-hover-color);
+}
+
+.form__button_type_submit:disabled {
+    background-color: var(--form-button-submit-disabled-bg-color);
+    color: var(--form-button-submit-disabled-color);
+}
