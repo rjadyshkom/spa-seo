@@ -10,6 +10,7 @@ input {
     box-sizing: border-box;
     color: var(--text-color);
     min-height: 62px;
+    transition: border-color .3s ease-in-out;
 }
 input:focus:not(.form__input_invalid) {
     border-color: var(--border-color-focus);
