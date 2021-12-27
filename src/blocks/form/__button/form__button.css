@@ -9,7 +9,9 @@
     box-sizing: border-box;
     border-radius: 4px;
     width: auto;
-    padding: 20px 32px;
+    min-width: calc(50% - 10px);
+    height: 68px;
+    padding: 0;
     border: none;
     outline-offset: 2px;
     display: inline-flex;
@@ -17,5 +19,5 @@
     justify-content: center;
     position: relative;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
-    min-width: 150px;
+    align-items: center;
 }
