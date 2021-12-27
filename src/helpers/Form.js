@@ -63,6 +63,7 @@ const Form = (props) => {
 
                         } catch (error) {
                             setState(props.messageError);
+                            setSubmitting(false);
                         }
                     };
 
