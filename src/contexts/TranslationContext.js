@@ -112,7 +112,7 @@ export const translations = {
                     required: 'Укажите email'
                 },
                 message: {
-                    max: 'Максимум 100 символов.',
+                    max: 'Максимум 100 символов',
                     required: 'Напишите хоть что-нибудь'
                 }
             },
@@ -242,8 +242,8 @@ export const translations = {
                     required: 'Specify email'
                 },
                 message: {
-                    max: 'Maximum 100 characters.',
-                    required: 'Write something.'
+                    max: 'Maximum 100 characters',
+                    required: 'Write something'
                 }
             },
             placeholders: {

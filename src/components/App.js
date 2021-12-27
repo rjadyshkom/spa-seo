@@ -219,6 +219,7 @@ function App() {
                             canonical={routes.contacts}
                             siteName={translations[language].siteName}
                             favicon={theme === 'light' ? notFound.darkImage : notFound.image}
+                            ogImage={theme === 'light' ? notFound.ogImage : notFound.darkOgImage}
                         />
                     </Route>
 
