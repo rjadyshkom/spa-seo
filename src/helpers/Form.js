@@ -1,23 +1,10 @@
-import * as React from 'react';
+import React, {useState} from "react";
 import {object, string} from 'yup';
 import axios from 'axios';
 import {Formik} from 'formik';
 
 const API_URL = 'https://rjadysh.com/wp-json';
 const FORM_ID = '4009';
-
-const validationSchema = object({
-    formName: string()
-        .min(2, 'Минимум 2 символа')
-        .required('Укажите имя'),
-    formEmail: string()
-        .min(2, 'Минимум 7 символов')
-        .matches(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Некорректный email')
-        .required('Укажите email'),
-    formMessage: string()
-        .max(100, 'Ограничение в 100 символов. Краткость - сестра таланта.')
-        .required('Напишите хоть что-нибудь')
-});
 
 const dataFromForm = (json) => {
     try {
@@ -33,8 +20,21 @@ const dataFromForm = (json) => {
     }
 }
 
-const Form = () => {
-    const [state, setState] = React.useState('');
+const Form = (props) => {
+    const [state, setState] = useState('');
+
+    const validationSchema = object({
+        formName: string()
+            .min(2, props.validationNameMin)
+            .required(props.validationNameRequired),
+        formEmail: string()
+            .min(7, props.validationEmailMin)
+            .matches(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, props.validationEmailMatches)
+            .required(props.validationEmailRequired),
+        formMessage: string()
+            .max(100, props.validationMessageMax)
+            .required(props.validationMessageRequired)
+    });
 
     return (
         <>
@@ -49,7 +49,7 @@ const Form = () => {
                     const onFormSubmit = async () => {
 
                         try {
-                            const result = await axios({
+                            await axios({
                                 url: `${API_URL}/contact-form-7/v1/contact-forms/${FORM_ID}/feedback`,
                                 headers: {
                                     'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
@@ -57,13 +57,12 @@ const Form = () => {
                                 method: 'POST',
                                 data: dataFromForm(values)
                             })
-                            setState(result.data.message);
-                            console.log(result)
+                            setState(props.messageSuccess);
                             setSubmitting(false);
                             resetForm();
 
                         } catch (error) {
-                            setState('Отправка не удалась');
+                            setState(props.messageError);
                         }
                     };
 
@@ -90,12 +89,12 @@ const Form = () => {
                                     type="text"
                                     name="formName"
                                     id="formName"
-                                    placeholder="Чтобы знать, как к Вам обращаться"
+                                    placeholder={props.placeholderName}
                                     onBlur={handleBlur}
                                     onChange={handleChange}
                                     value={values.formName}
                                 />
-                                <label htmlFor="formName" className="form__label"> Имя: </label>
+                                <label htmlFor="formName" className="form__label"> {props.labelName} </label>
                                 <div className="form__wrapper">
                                     {errors.formName && touched.formName ?
                                         <span
@@ -109,12 +108,12 @@ const Form = () => {
                                     type="email"
                                     name="formEmail"
                                     id="formEmail"
-                                    placeholder="Чтобы было, куда отвечать"
+                                    placeholder={props.placeholderEmail}
                                     onBlur={handleBlur}
                                     onChange={handleChange}
                                     value={values.formEmail}
                                 />
-                                <label htmlFor="formEmail" className="form__label"> Электропочта: </label>
+                                <label htmlFor="formEmail" className="form__label"> {props.labelEmail} </label>
                                 <div className="form__wrapper">
                                     {errors.formEmail && touched.formEmail ?
                                         <span
@@ -126,14 +125,14 @@ const Form = () => {
                                     <textarea
                                         name="formMessage"
                                         id="formMessage"
-                                        placeholder="Чтобы понять, о чём пойдёт речь"
+                                        placeholder={props.placeholderMessage}
                                         rows="1"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
                                         value={values.formMessage}
                                         className={errors.formMessage && touched.formMessage ? "form__input_invalid" : "form__input_textarea"}
                                     />
-                                <label htmlFor="formMessage" className="form__label"> Сообщение: </label>
+                                <label htmlFor="formMessage" className="form__label"> {props.labelMessage} </label>
                                 <div className="form__wrapper">
                                     {errors.formMessage && touched.formMessage ?
                                         <span
@@ -148,14 +147,14 @@ const Form = () => {
                                 onClick={handleReset}
                                 disabled={!dirty || isSubmitting}
                             >
-                                Очистить
+                                {props.buttonReset}
                             </button>
                             <button type="submit" disabled={!(dirty && isValid)}
                                     className="form__button form__button_type_submit">
                                 {isSubmitting ? <svg className="spinner" viewBox="0 0 50 50">
                                     <circle className="path" cx="25" cy="25" r="10" fill="none"
                                             strokeWidth="3">&nbsp;</circle>
-                                </svg> : 'Отправить'}
+                                </svg> : props.buttonSubmit}
                             </button>
                         </fieldset>
 
@@ -169,7 +168,6 @@ const Form = () => {
                                 </div>
                             </fieldset>
                             : null}
-
                     </form>
                 )}
             </Formik>

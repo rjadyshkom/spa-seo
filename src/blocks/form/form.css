@@ -9,3 +9,10 @@
     transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out, height .3s ease-in-out;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .form {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

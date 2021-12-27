@@ -53,7 +53,9 @@ export const translations = {
         },
         contacts: {
             link: routes.contacts,
-            title: 'Контакты'
+            title: 'Контакты',
+            keywords: 'Отправка писем React, Contact Form 7 API, валидация форм React, Formik.',
+            description: 'Отправка писем из React без использования собственного сервера и сторонних сервисов.'
         },
         notFound: {
             title: '404',
@@ -92,7 +94,42 @@ export const translations = {
                 description: 'Сохранил исходник'
             }
         },
-        siteName: 'Простой способ индексации SPA.'
+        siteName: 'Простой способ индексации SPA.',
+        form: {
+            labels: {
+                name: 'Имя:',
+                email: 'Электропочта:',
+                message: 'Сообщение:'
+            },
+            validationMessages: {
+                name: {
+                    min: 'Минимум 2 символа',
+                    required: 'Укажите имя'
+                },
+                email: {
+                    min: 'Минимум 7 символов',
+                    matches: 'Некорректный email',
+                    required: 'Укажите email'
+                },
+                message: {
+                    max: 'Максимум 100 символов. Краткость - сестра таланта',
+                    required: 'Напишите хоть что-нибудь'
+                }
+            },
+            placeholders: {
+                name: 'Чтобы знать, как к Вам обращаться',
+                email: 'Чтобы было, куда отвечать',
+                message: 'Чтобы понять, о чём пойдёт речь'
+            },
+            buttonNames: {
+                reset: 'Сбросить',
+                submit: 'Отправить'
+            },
+            messages: {
+                success: 'Успешный успех!',
+                error: 'Неудачная неудача!'
+            }
+        }
     },
     en: {
         spa: {
@@ -145,7 +182,9 @@ export const translations = {
         },
         contacts: {
             link: routes.contacts,
-            title: 'Contacts'
+            title: 'Contacts',
+            keywords: 'Send email from React, Contact Form 7 API, React form validation, Formik.',
+            description: 'Sending emails from React without using your own server or third-party services.'
         },
         notFound: {
             title: '404',
@@ -185,7 +224,42 @@ export const translations = {
 
             }
         },
-        siteName: 'A simple way to index the SPA.'
+        siteName: 'A simple way to index the SPA.',
+        form: {
+            labels: {
+              name: 'Name:',
+              email: 'Email:',
+              message: 'Message:'
+            },
+            validationMessages: {
+                name: {
+                    min: 'At least 2 characters',
+                    required: 'Specify name'
+                },
+                email: {
+                    min: 'At least 7 characters',
+                    matches: 'Invalid email',
+                    required: 'Specify email'
+                },
+                message: {
+                    max: 'Maximum 100 characters. It\'s less great than short.',
+                    required: 'Write something.'
+                }
+            },
+            placeholders: {
+                name: 'To know how to address you',
+                email: 'To have something to answer to',
+                message: 'To understand what we\'re talking about'
+            },
+            buttonNames: {
+                reset: ' Reset',
+                submit: 'Submit'
+            },
+            messages: {
+                success: 'Successful success!',
+                error: 'Unfortunate setback!'
+            }
+        }
     }
 }
 

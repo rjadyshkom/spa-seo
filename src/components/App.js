@@ -194,7 +194,32 @@ function App() {
                     </Route>
 
                     <Route exact path={routes.contacts}>
-                        <Contacts/>
+                        <Contacts
+                            labelName={translations[language].form.labels.name}
+                            labelEmail={translations[language].form.labels.email}
+                            labelMessage={translations[language].form.labels.message}
+                            placeholderName={translations[language].form.placeholders.name}
+                            placeholderEmail={translations[language].form.placeholders.email}
+                            placeholderMessage={translations[language].form.placeholders.message}
+                            buttonReset={translations[language].form.buttonNames.reset}
+                            buttonSubmit={translations[language].form.buttonNames.submit}
+                            validationNameMin={translations[language].form.validationMessages.name.min}
+                            validationNameRequired={translations[language].form.validationMessages.name.required}
+                            validationEmailMin={translations[language].form.validationMessages.email.min}
+                            validationEmailMatches={translations[language].form.validationMessages.email.matches}
+                            validationEmailRequired={translations[language].form.validationMessages.email.required}
+                            validationMessageMax={translations[language].form.validationMessages.message.max}
+                            validationMessageRequired={translations[language].form.validationMessages.message.required}
+                            messageSuccess={translations[language].form.messages.success}
+                            messageError={translations[language].form.messages.error}
+                            language={language}
+                            title={translations[language].contacts.title}
+                            subtitle={translations[language].contacts.description}
+                            keywords={translations[language].contacts.keywords}
+                            canonical={routes.contacts}
+                            siteName={translations[language].siteName}
+                            favicon={theme === 'light' ? notFound.darkImage : notFound.image}
+                        />
                     </Route>
 
                     <Route>
