@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import {object, string} from 'yup';
 import axios from 'axios';
 import {Formik} from 'formik';
 
-const API_URL = 'https://rjadysh.com/wp-json';
-const FORM_ID = '4009';
+const API_URL = process.env.REACT_APP_API_URL;
+const FORM_ID = process.env.REACT_APP_WP_CF7_ID;
 
 const dataFromForm = (json) => {
     try {
