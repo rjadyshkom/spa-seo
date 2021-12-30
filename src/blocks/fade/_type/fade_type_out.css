@@ -1,8 +1,8 @@
-.fade_direction_out {
-    animation-name: fade_direction_out;
+.fade_type_out {
+    animation-name: fade_type_out;
 }
 
-@keyframes fade_direction_out {
+@keyframes fade_type_out {
     from {
         opacity: 1;
         transform: translate(0, 0);

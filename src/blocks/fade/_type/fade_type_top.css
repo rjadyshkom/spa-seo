@@ -1,8 +1,8 @@
-.fade_direction_top {
-    animation-name: fade_direction_top;
+.fade_type_top {
+    animation-name: fade_type_top;
 }
 
-@keyframes fade_direction_top {
+@keyframes fade_type_top {
     from {
         opacity: 0;
         transform: translate(0, 5px);

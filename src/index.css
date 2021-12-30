@@ -14,9 +14,9 @@
 @import url(./blocks/subnav/__description/subnav__description.css);
 @import url(./blocks/emoji/emoji.css);
 @import url(./blocks/fade/fade.css);
-@import url(./blocks/fade/_direction/fade_direction_in.css);
-@import url(./blocks/fade/_direction/fade_direction_out.css);
-@import url(./blocks/fade/_direction/fade_direction_top.css);
+@import url(blocks/fade/_type/fade_type_in.css);
+@import url(blocks/fade/_type/fade_type_out.css);
+@import url(blocks/fade/_type/fade_type_top.css);
 @import url(./blocks/switcher/switcher.css);
 @import url(./blocks/switcher/__image/switcher__image.css);
 @import url(./blocks/form/form.css);

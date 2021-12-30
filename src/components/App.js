@@ -36,7 +36,7 @@ function App() {
     }
 
     useEffect(() => {
-        if (location !== currentLocation) setFade('fade_direction_out');
+        if (location !== currentLocation) setFade('fade_type_out');
     }, [location, currentLocation]);
 
     useEffect(() => {
@@ -72,8 +72,8 @@ function App() {
             <div
                 className={`fade ${fade}`}
                 onAnimationEnd={() => {
-                    if (fade === 'fade_direction_out') {
-                        setFade('fade_direction_in');
+                    if (fade === 'fade_type_out') {
+                        setFade('fade_type_in');
                         setCurrentLocation(location);
                     }
                 }}
