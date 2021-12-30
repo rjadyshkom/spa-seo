@@ -1,0 +1,7 @@
+.form__info_visible {
+    padding: 24px 20px;
+    margin: 25px 0 0;
+    max-height: 74px;
+    opacity: 1;
+    visibility: visible;
+}

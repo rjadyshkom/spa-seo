@@ -7,6 +7,15 @@ export const systemLanguage = () => {
     else return ('en')
 };
 
+export const showOrHideMessageSmoothly = () => {
+    const formInfo = document.querySelector('.form__info');
+    if (!formInfo.classList.contains('form__info_visible')) {
+        formInfo.classList.add('form__info_visible');
+    } else {
+        formInfo.classList.remove('form__info_visible');
+    }
+}
+
 // Корректные пути изображений для поисковых роботов
 export const spa = process.env.REACT_APP_PUBLIC_URL + '/spa.png';
 export const problem = process.env.REACT_APP_PUBLIC_URL + '/problem.png';

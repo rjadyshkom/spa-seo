@@ -2,21 +2,22 @@ import React, {useState} from 'react';
 import {object, string} from 'yup';
 import axios from 'axios';
 import {Formik} from 'formik';
+import {showOrHideMessageSmoothly} from '../utils/constants';
 
 const API_URL = process.env.REACT_APP_API_URL;
 const FORM_ID = process.env.REACT_APP_WP_CF7_ID;
 
 const dataFromForm = (json) => {
     try {
-        const data = new FormData()
+        const data = new FormData();
 
         for (let key in json) {
-            data.append(key, json[key])
+            data.append(key, json[key]);
         }
         return data
     } catch (error) {
-        console.error(error)
-        return null
+        console.error(error);
+        return null;
     }
 }
 
@@ -58,12 +59,19 @@ const Form = (props) => {
                                 data: dataFromForm(values)
                             })
                             setState(props.messageSuccess);
+                            showOrHideMessageSmoothly();
                             setSubmitting(false);
                             resetForm();
-
+                            setTimeout(() => {
+                                showOrHideMessageSmoothly();
+                            }, 3000)
                         } catch (error) {
                             setState(props.messageError);
+                            showOrHideMessageSmoothly();
                             setSubmitting(false);
+                            setTimeout(() => {
+                                showOrHideMessageSmoothly();
+                            }, 3000)
                         }
                     };
 
@@ -93,13 +101,14 @@ const Form = (props) => {
                                     placeholder={props.placeholderName}
                                     onBlur={handleBlur}
                                     onChange={handleChange}
-                                    value={values.formName}
+                                    value={values.formName
+                                    }
                                 />
                                 <label htmlFor="formName" className="form__label"> {props.labelName} </label>
                                 <div className="form__wrapper">
                                     {errors.formName && touched.formName ?
                                         <span
-                                            className="form__error fade fade_direction_top">{errors.formName}</span> : null}
+                                            className="form__error fade fade_type_top">{errors.formName}</span> : null}
                                 </div>
                             </div>
 
@@ -118,7 +127,7 @@ const Form = (props) => {
                                 <div className="form__wrapper">
                                     {errors.formEmail && touched.formEmail ?
                                         <span
-                                            className="form__error fade fade_direction_top">{errors.formEmail}</span> : null}
+                                            className="form__error fade fade_type_top">{errors.formEmail}</span> : null}
                                 </div>
                             </div>
 
@@ -137,7 +146,7 @@ const Form = (props) => {
                                 <div className="form__wrapper">
                                     {errors.formMessage && touched.formMessage ?
                                         <span
-                                            className="form__error fade fade_direction_top">{errors.formMessage}</span> : null}
+                                            className="form__error fade fade_type_top">{errors.formMessage}</span> : null}
                                 </div>
                             </div>
                         </fieldset>
@@ -159,16 +168,18 @@ const Form = (props) => {
                             </button>
                         </fieldset>
 
-                        {state
-                            ?
-                            <fieldset className="form__info fade fade_direction_top">
+
+                        <fieldset className="form__info">
+                            {state
+                                ?
                                 <div className="form__container">
                                     <p className="form__message">
                                         {state}
                                     </p>
                                 </div>
-                            </fieldset>
-                            : null}
+                                : null}
+                        </fieldset>
+
                     </form>
                 )}
             </Formik>
