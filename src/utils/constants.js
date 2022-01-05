@@ -1,5 +1,6 @@
 export const baseUrl = 'https://spa.ohuel.ru';
 export const siteName = 'Простой способ индексации SPA.';
+export const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export const systemLanguage = () => {
     const currentUserLanguage = navigator.language.slice(0, 2).toString();

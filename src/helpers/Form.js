@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {object, string} from 'yup';
 import axios from 'axios';
 import {Formik} from 'formik';
-import {showOrHideMessageSmoothly} from '../utils/constants';
+import {showOrHideMessageSmoothly, emailRegex} from '../utils/constants';
 
 const API_URL = process.env.REACT_APP_API_URL;
 const FORM_ID = process.env.REACT_APP_WP_CF7_ID;
@@ -30,7 +30,7 @@ const Form = (props) => {
             .required(props.validationNameRequired),
         formEmail: string()
             .min(7, props.validationEmailMin)
-            .matches(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, props.validationEmailMatches)
+            .matches(emailRegex, props.validationEmailMatches)
             .required(props.validationEmailRequired),
         formMessage: string()
             .max(100, props.validationMessageMax)
@@ -179,7 +179,6 @@ const Form = (props) => {
                                 </div>
                                 : null}
                         </fieldset>
-
                     </form>
                 )}
             </Formik>
