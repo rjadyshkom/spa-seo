@@ -1,6 +1,6 @@
-import Form from '../helpers/Form';
-import {Seo} from '../helpers/Seo';
-import {baseUrl} from "../utils/constants";
+import ContactForm from '../helpers/ContactForm';
+import { Seo } from '../helpers/Seo';
+import { baseUrl } from "../utils/constants";
 import React from "react";
 
 export function Contacts(props) {
@@ -17,7 +17,7 @@ export function Contacts(props) {
                 siteName={props.siteName}
             />
             <div className="content">
-                <Form
+                <ContactForm
                     labelName={props.labelName}
                     labelEmail={props.labelEmail}
                     labelMessage={props.labelMessage}

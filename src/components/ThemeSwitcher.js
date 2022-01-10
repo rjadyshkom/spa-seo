@@ -1,4 +1,4 @@
-import {themeIconDark, themeIconLight} from '../utils/constants';
+import { themeIconDark, themeIconLight } from '../utils/constants';
 
 export function ThemeSwitcher(props) {
 

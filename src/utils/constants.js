@@ -61,5 +61,5 @@ export const ogNotFoundDark = process.env.REACT_APP_PUBLIC_URL + '/og-not-found-
 export const languageIconRu = process.env.REACT_APP_PUBLIC_URL + '/language-ru.png';
 export const languageIconEn = process.env.REACT_APP_PUBLIC_URL + '/language-en.png';
 
-export const themeIconDark =  process.env.REACT_APP_PUBLIC_URL + '/theme-icon-dark.png';
-export const themeIconLight =  process.env.REACT_APP_PUBLIC_URL + '/theme-icon-light.png';
+export const themeIconDark = process.env.REACT_APP_PUBLIC_URL + '/theme-icon-dark.png';
+export const themeIconLight = process.env.REACT_APP_PUBLIC_URL + '/theme-icon-light.png';

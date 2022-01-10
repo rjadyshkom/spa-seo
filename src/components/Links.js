@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from './Link';
-import {Seo} from '../helpers/Seo';
-import {Emoji} from '../helpers/Emoji';
-import {baseUrl} from "../utils/constants";
+import { Link } from './Link';
+import { Seo } from '../helpers/Seo';
+import { Emoji } from '../helpers/Emoji';
+import { baseUrl } from "../utils/constants";
 
 export function Links(props) {
 
@@ -31,8 +31,9 @@ export function Links(props) {
                         ))
                     }
                 </nav>
-                <Emoji emoji={props.emoji}
-                       title={props.title}
+                <Emoji
+                    emoji={props.emoji}
+                    title={props.title}
                 />
             </article>
         </>

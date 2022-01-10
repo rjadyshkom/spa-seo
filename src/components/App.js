@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {Route, Switch, useLocation} from 'react-router-dom';
-import {Header} from './Header';
-import {Article} from './Article';
-import {Links} from './Links';
-import {Contacts} from './Contacts';
-import {TranslationContext, translations} from '../contexts/TranslationContext';
-import {images} from '../data/images';
-import {systemLanguage} from '../utils/constants';
-import {routes} from '../data/routes';
+import React, { useEffect, useState } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { Header } from './Header';
+import { Article } from './Article';
+import { Links } from './Links';
+import { Contacts } from './Contacts';
+import { TranslationContext, translations } from '../contexts/TranslationContext';
+import { images } from '../data/images';
+import { systemLanguage } from '../utils/constants';
+import { routes } from '../data/routes';
 import useVH from 'react-vh';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     const [language, setLanguage] = useState('ru');
     const [theme, setTheme] = useState('light');
     const [fade, setFade] = useState('fade_direction_in');
-    const {spa, problem, task, solution, technologies, result, why, who, notFound} = images;
+    const { spa, problem, task, solution, technologies, result, why, who, notFound } = images;
 
     useVH();
 
@@ -29,24 +29,28 @@ function App() {
     }
 
     function handleLanguageChange(language) {
-        setLanguage(language)
-        if (language !== 'ru')
+        setLanguage(language);
+        if (language !== 'ru') {
             setLanguage('ru')
-        else setLanguage('en')
+        } else {
+            setLanguage('en')
+        }
     }
 
     useEffect(() => {
-        if (location !== currentLocation) setFade('fade_type_out');
+        if (location !== currentLocation) {
+            setFade('fade_type_out')
+        }
     }, [location, currentLocation]);
 
     useEffect(() => {
         if (language !== systemLanguage) {
             window.addEventListener('languagechange', () => {
-                    setLanguage(systemLanguage)
+                    setLanguage(systemLanguage);
                 }
             )
             return () => window.removeEventListener('languagechange', () => {
-            })
+            });
         }
     }, [language]);
 
@@ -79,7 +83,10 @@ function App() {
                 }}
             >
                 <Switch location={currentLocation}>
-                    <Route exact path={routes.spa}>
+                    <Route
+                        exact
+                        path={routes.spa}
+                    >
                         <Article
                             language={language}
                             title={translations[language].spa.title}
@@ -93,7 +100,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.problem}>
+                    <Route
+                        exact
+                        path={routes.problem}
+                    >
                         <Article
                             language={language}
                             title={translations[language].problem.title}
@@ -107,7 +117,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.task}>
+                    <Route
+                        exact
+                        path={routes.task}
+                    >
                         <Article
                             language={language}
                             title={translations[language].task.title}
@@ -121,7 +134,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.solution}>
+                    <Route
+                        exact
+                        path={routes.solution}
+                    >
                         <Article
                             language={language}
                             title={translations[language].solution.title}
@@ -135,7 +151,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.technologies}>
+                    <Route
+                        exact
+                        path={routes.technologies}
+                    >
                         <Links
                             language={language}
                             title={translations[language].technologies.title}
@@ -150,7 +169,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.result}>
+                    <Route
+                        exact
+                        path={routes.result}
+                    >
                         <Article
                             language={language}
                             title={translations[language].result.title}
@@ -164,7 +186,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.why}>
+                    <Route
+                        exact
+                        path={routes.why}
+                    >
                         <Article
                             language={language}
                             title={translations[language].why.title}
@@ -178,7 +203,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.who}>
+                    <Route
+                        exact
+                        path={routes.who}
+                    >
                         <Links
                             language={language}
                             title={translations[language].who.title}
@@ -193,7 +221,10 @@ function App() {
                         />
                     </Route>
 
-                    <Route exact path={routes.contacts}>
+                    <Route
+                        exact
+                        path={routes.contacts}
+                    >
                         <Contacts
                             labelName={translations[language].form.labels.name}
                             labelEmail={translations[language].form.labels.email}

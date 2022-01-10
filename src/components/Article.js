@@ -1,7 +1,7 @@
 import React from 'react';
-import {Seo} from '../helpers/Seo';
-import {Emoji} from '../helpers/Emoji';
-import {baseUrl} from '../utils/constants';
+import { Seo } from '../helpers/Seo';
+import { Emoji } from '../helpers/Emoji';
+import { baseUrl } from '../utils/constants';
 
 export function Article(props) {
 
@@ -21,8 +21,9 @@ export function Article(props) {
             <article className="content">
                 <h1 className="title">{props.title}</h1>
                 <p className="subtitle">{props.subtitle}</p>
-                <Emoji emoji={props.emoji}
-                       title={props.title}
+                <Emoji
+                    emoji={props.emoji}
+                    title={props.title}
                 />
             </article>
         </>

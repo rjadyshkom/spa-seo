@@ -1,5 +1,5 @@
 import React from 'react';
-import {routes} from "../data/routes";
+import { routes } from "../data/routes";
 
 export const translations = {
     ru: {
@@ -227,9 +227,9 @@ export const translations = {
         siteName: 'A simple way to index the SPA.',
         form: {
             labels: {
-              name: 'Name:',
-              email: 'Email:',
-              message: 'Message:'
+                name: 'Name:',
+                email: 'Email:',
+                message: 'Message:'
             },
             validationMessages: {
                 name: {

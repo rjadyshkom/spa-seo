@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
-import {NavItem} from './NavItem';
-import {TranslationContext} from '../contexts/TranslationContext';
+import React, { useContext } from 'react';
+import { NavItem } from './NavItem';
+import { TranslationContext } from '../contexts/TranslationContext';
 
 export function NavBar() {
 
