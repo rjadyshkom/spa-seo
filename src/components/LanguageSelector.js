@@ -1,5 +1,6 @@
 import React from 'react';
-import { languageIconRu, languageIconEn } from '../utils/constants';
+import languageIconRu from '../images/language-ru.png';
+import languageIconEn from '../images/language-en.png';
 
 function LanguageSelector(props) {
 
