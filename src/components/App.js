@@ -95,7 +95,6 @@ function App() {
                             emoji={theme === 'light' ? spa.darkImage : spa.image}
                             favicon={theme === 'light' ? spa.darkImage : spa.image}
                             ogImage={theme === 'light' ? spa.ogImage : spa.darkOgImage}
-                            canonical={routes.spa}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -112,7 +111,6 @@ function App() {
                             emoji={theme === 'light' ? problem.darkImage : problem.image}
                             favicon={theme === 'light' ? problem.darkImage : problem.image}
                             ogImage={theme === 'light' ? problem.ogImage : problem.darkOgImage}
-                            canonical={routes.problem}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -129,7 +127,6 @@ function App() {
                             emoji={theme === 'light' ? task.darkImage : task.image}
                             favicon={theme === 'light' ? task.darkImage : task.image}
                             ogImage={theme === 'light' ? task.ogImage : task.darkOgImage}
-                            canonical={routes.task}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -146,7 +143,6 @@ function App() {
                             emoji={theme === 'light' ? solution.darkImage : solution.image}
                             favicon={theme === 'light' ? solution.darkImage : solution.image}
                             ogImage={theme === 'light' ? solution.ogImage : solution.darkOgImage}
-                            canonical={routes.solution}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -164,7 +160,6 @@ function App() {
                             emoji={theme === 'light' ? technologies.darkImage : technologies.image}
                             favicon={theme === 'light' ? technologies.darkImage : technologies.image}
                             ogImage={theme === 'light' ? technologies.ogImage : technologies.darkOgImage}
-                            canonical={routes.technologies}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -181,7 +176,6 @@ function App() {
                             emoji={theme === 'light' ? result.darkImage : result.image}
                             favicon={theme === 'light' ? result.darkImage : result.image}
                             ogImage={theme === 'light' ? result.ogImage : result.darkOgImage}
-                            canonical={routes.result}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -198,7 +192,6 @@ function App() {
                             emoji={theme === 'light' ? why.darkImage : why.image}
                             favicon={theme === 'light' ? why.darkImage : why.image}
                             ogImage={theme === 'light' ? why.ogImage : why.darkOgImage}
-                            canonical={routes.why}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -216,7 +209,6 @@ function App() {
                             emoji={theme === 'light' ? who.darkImage : who.image}
                             favicon={theme === 'light' ? who.darkImage : who.image}
                             ogImage={theme === 'light' ? who.ogImage : who.darkOgImage}
-                            canonical={routes.who}
                             siteName={translations[language].siteName}
                         />
                     </Route>
@@ -247,7 +239,6 @@ function App() {
                             title={translations[language].contacts.title}
                             subtitle={translations[language].contacts.description}
                             keywords={translations[language].contacts.keywords}
-                            canonical={routes.contacts}
                             siteName={translations[language].siteName}
                             favicon={theme === 'light' ? notFound.darkImage : notFound.image}
                             ogImage={theme === 'light' ? notFound.ogImage : notFound.darkOgImage}

@@ -1,7 +1,6 @@
 import ContactForm from '../helpers/ContactForm';
 import { Seo } from '../helpers/Seo';
-import { baseUrl } from "../utils/constants";
-import React from "react";
+import React from 'react';
 
 export function Contacts(props) {
     return (
@@ -12,7 +11,6 @@ export function Contacts(props) {
                 keywords={props.keywords}
                 favicon={props.favicon}
                 ogImage={props.ogImage}
-                canonical={`${baseUrl}${props.canonical}`}
                 language={props.language}
                 siteName={props.siteName}
             />

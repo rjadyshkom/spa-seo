@@ -88,10 +88,6 @@ export function Seo({
                     rel: 'icon',
                     type: 'image/png',
                     href: favicon
-                },
-                {
-                    rel: 'canonical',
-                    href: canonical
                 }
             ]}
         />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Seo } from '../helpers/Seo';
 import { Emoji } from '../helpers/Emoji';
-import { baseUrl } from '../utils/constants';
 
 export function Article(props) {
 
@@ -13,7 +12,6 @@ export function Article(props) {
                 keywords={props.keywords}
                 favicon={props.favicon}
                 ogImage={props.ogImage}
-                canonical={`${baseUrl}${props.canonical}`}
                 language={props.language}
                 siteName={props.siteName}
             />
