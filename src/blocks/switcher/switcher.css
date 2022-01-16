@@ -10,7 +10,7 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
     .switcher {
         grid-column: 3;
         margin-right: 0;
