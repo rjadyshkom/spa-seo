@@ -3,6 +3,7 @@ import { object, string } from 'yup';
 import axios from 'axios';
 import { Formik } from 'formik';
 import { showOrHideMessageSmoothly, emailRegex } from '../utils/constants';
+import {TranslationContext} from '../contexts/TranslationContext';
 
 const API_URL = process.env.REACT_APP_API_URL;
 const FORM_ID = process.env.REACT_APP_WP_CF7_ID;
@@ -21,18 +22,19 @@ const dataFromForm = (json) => {
     }
 }
 
-const ContactForm = (props) => {
+const ContactForm = () => {
     const [state, setState] = useState('');
+    const {buttonNames, labels, messages, placeholders, validationMessages } = React.useContext(TranslationContext).form;
 
     const validationSchema = object({
         formName: string()
-            .min(2, props.validationNameMin)
-            .required(props.validationNameRequired), formEmail: string()
-            .min(7, props.validationEmailMin)
-            .matches(emailRegex, props.validationEmailMatches)
-            .required(props.validationEmailRequired), formMessage: string()
-            .max(100, props.validationMessageMax)
-            .required(props.validationMessageRequired)
+            .min(2, validationMessages.name.min)
+            .required(validationMessages.name.required), formEmail: string()
+            .min(7, validationMessages.email.min)
+            .matches(emailRegex, validationMessages.email.matches)
+            .required(validationMessages.email.required), formMessage: string()
+            .max(100, validationMessages.message.max)
+            .required(validationMessages.message.required)
     });
 
     return (<>
@@ -55,7 +57,7 @@ const ContactForm = (props) => {
                             method: 'POST',
                             data: dataFromForm(values)
                         })
-                        setState(props.messageSuccess);
+                        setState(messages.success);
                         showOrHideMessageSmoothly();
                         setSubmitting(false);
                         resetForm();
@@ -63,7 +65,7 @@ const ContactForm = (props) => {
                             showOrHideMessageSmoothly();
                         }, 3000)
                     } catch (error) {
-                        setState(props.messageError);
+                        setState(messages.error);
                         showOrHideMessageSmoothly();
                         setSubmitting(false);
                         setTimeout(() => {
@@ -98,7 +100,7 @@ const ContactForm = (props) => {
                             type="text"
                             name="formName"
                             id="formName"
-                            placeholder={props.placeholderName}
+                            placeholder={placeholders.name}
                             onBlur={handleBlur}
                             onChange={handleChange}
                             value={values.formName}
@@ -106,7 +108,7 @@ const ContactForm = (props) => {
                         <label
                             htmlFor="formName"
                             className="form__label"
-                        > {props.labelName} </label>
+                        > {labels.name} </label>
                         <div className="form__wrapper">
                             {errors.formName && touched.formName ? <span
                                 className="form__error fade fade_type_top"
@@ -120,7 +122,7 @@ const ContactForm = (props) => {
                             type="email"
                             name="formEmail"
                             id="formEmail"
-                            placeholder={props.placeholderEmail}
+                            placeholder={placeholders.email}
                             onBlur={handleBlur}
                             onChange={handleChange}
                             value={values.formEmail}
@@ -128,7 +130,7 @@ const ContactForm = (props) => {
                         <label
                             htmlFor="formEmail"
                             className="form__label"
-                        > {props.labelEmail} </label>
+                        > {labels.email} </label>
                         <div className="form__wrapper">
                             {errors.formEmail && touched.formEmail ? <span
                                 className="form__error fade fade_type_top"
@@ -140,7 +142,7 @@ const ContactForm = (props) => {
                                     <textarea
                                         name="formMessage"
                                         id="formMessage"
-                                        placeholder={props.placeholderMessage}
+                                        placeholder={placeholders.message}
                                         rows="1"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
@@ -150,7 +152,7 @@ const ContactForm = (props) => {
                         <label
                             htmlFor="formMessage"
                             className="form__label"
-                        > {props.labelMessage} </label>
+                        > {labels.message} </label>
                         <div className="form__wrapper">
                             {errors.formMessage && touched.formMessage ? <span
                                 className="form__error fade fade_type_top"
@@ -165,7 +167,7 @@ const ContactForm = (props) => {
                         onClick={handleReset}
                         disabled={!dirty || isSubmitting}
                     >
-                        {props.buttonReset}
+                        {buttonNames.reset}
                     </button>
                     <button
                         type="submit"
@@ -186,7 +188,7 @@ const ContactForm = (props) => {
                                     strokeWidth="3"
                                 >&nbsp;</circle>
                             </svg>
-                            : props.buttonSubmit}
+                            : buttonNames.submit}
                     </button>
                 </fieldset>
 

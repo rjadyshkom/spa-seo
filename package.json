@@ -24,7 +24,7 @@
     "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -P 2222 -r ./build/* starwarsru@185.72.146.161:/home/s/starwarsru/spa.ohuel.ru && react-snap-sitemap --base-url=https://spa.ohuel.ru/ --change-frequency=daily"
+    "deploy": "npm run build && react-snap-sitemap --base-url=https://spa.ohuel.ru/ --change-frequency=weekly && scp -P 2222 -r ./build/* starwarsru@185.72.146.161:/home/s/starwarsru/spa.ohuel.ru"
   },
   "eslintConfig": {
     "extends": [

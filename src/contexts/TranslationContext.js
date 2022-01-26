@@ -1,5 +1,5 @@
 import React from 'react';
-import { routes } from "../data/routes";
+import { routes } from '../data/routes';
 
 export const translations = {
     ru: {

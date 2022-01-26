@@ -16,3 +16,4 @@ export const showOrHideMessageSmoothly = () => {
         formInfo.classList.remove('form__info_visible');
     }
 }
+
