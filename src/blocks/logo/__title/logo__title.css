@@ -1,0 +1,8 @@
+.logo__title {
+    opacity: .7;
+    margin: 0;
+    padding: 0;
+    color: var(--title-color);
+    font-size: 30px;
+    transition: color .3s ease-in-out;
+}

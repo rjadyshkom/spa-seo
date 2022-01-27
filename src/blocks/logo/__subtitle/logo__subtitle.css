@@ -1,0 +1,4 @@
+.logo__subtitle {
+    color: var(--text-color);
+    transition: color .3s ease-in-out;
+}

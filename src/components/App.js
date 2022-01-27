@@ -84,7 +84,6 @@ function App() {
             >
                 <Routes location={currentLocation}>
                     <Route
-                        end
                         path={routes.spa}
                         element={
                             <Article
@@ -101,7 +100,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.problem}
                         element={
                             <Article
@@ -118,7 +116,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.task}
                         element={
                             <Article
@@ -135,7 +132,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.solution}
                         element={
                             <Article
@@ -152,7 +148,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.technologies}
                         element={
                             <Links
@@ -170,7 +165,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.result}
                         element={
                             <Article
@@ -187,7 +181,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.why}
                         element={
                             <Article
@@ -204,7 +197,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.who}
                         element={
                             <Links
@@ -222,7 +214,6 @@ function App() {
                     />
 
                     <Route
-                        end
                         path={routes.contacts}
                         element={
                             <Contacts

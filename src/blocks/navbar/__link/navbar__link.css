@@ -3,11 +3,23 @@
     text-decoration: none;
     text-transform: lowercase;
     font-size: 20px;
-    line-height: 30px;
-    margin-right: 20px;
     transition: font-size .2s ease-in-out;
 }
 
 .navbar__link:last-of-type{
     margin-right: 40px;
+}
+
+.navbar__link:first-of-type{
+    margin-left: 40px;
+}
+
+@media screen and (max-device-width: 1100px) {
+    .navbar__link:last-of-type{
+        margin-right: 0;
+    }
+
+    .navbar__link:first-of-type{
+        margin-left: 0;
+    }
 }

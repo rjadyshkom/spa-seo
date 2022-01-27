@@ -5,7 +5,7 @@ import { TranslationContext } from '../contexts/TranslationContext';
 export function NavBar() {
 
     const translation = useContext(TranslationContext);
-    const exclude = ['notFound', 'repos', 'authors', 'siteName', 'form'];
+    const exclude = ['notFound', 'repos', 'authors', 'siteName', 'form', 'spa'];
 
     const navigation = Object.keys(translation)
         .filter(key => !exclude.includes(key))
