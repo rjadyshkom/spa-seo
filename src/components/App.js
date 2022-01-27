@@ -219,8 +219,7 @@ function App() {
                     >
                         <Contacts
                             language={language}
-                            favicon={theme === 'light' ? notFound.darkImage : notFound.image}
-                            ogImage={theme === 'light' ? notFound.ogImage : notFound.darkOgImage}
+                            theme={theme}
                         />
                     </Route>
 
