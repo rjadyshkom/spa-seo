@@ -13,5 +13,6 @@
     /*noinspection CssUnresolvedCustomProperty*/
     .content {
         min-height: calc(var(--vh, 1vh) * 65);
+        padding: 25px 0;
     }
 }
