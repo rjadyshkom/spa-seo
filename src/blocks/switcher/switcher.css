@@ -1,6 +1,7 @@
 .switcher {
     cursor: pointer;
     display: flex;
+    min-width: 32px;
 }
 
 .switcher:last-of-type {
