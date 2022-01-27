@@ -5,10 +5,8 @@ export function NavItem({ item }) {
 
     return (
         <NavLink
-            exact
             to={item.link}
-            activeClassName="navbar__link_active"
-            className="navbar__link"
+            className={({ isActive }) => (isActive ? 'navbar__link navbar__link_active' : 'navbar__link')}
         >
             {item.title}
         </NavLink>
