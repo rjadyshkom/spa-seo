@@ -18,6 +18,13 @@ function App() {
     const [fade, setFade] = useState('fade_direction_in');
     const { spa, problem, task, solution, technologies, result, why, who, notFound } = images;
 
+    useEffect(() => {
+        if (location !== currentLocation) {
+            window.ym(86304701, 'hit', window.location.href);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location, currentLocation]);
+
     useVH();
 
     function handleThemeChange(theme) {
