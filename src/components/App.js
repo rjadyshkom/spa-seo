@@ -19,10 +19,7 @@ function App() {
     const { spa, problem, task, solution, technologies, result, why, who, notFound } = images;
 
     useEffect(() => {
-        if (location !== currentLocation) {
-            window.ym(86304701, 'hit', window.location.href);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        window.ym(86304701, 'hit', location.pathname);
     }, [location, currentLocation]);
 
     useVH();
